@@ -20,15 +20,13 @@
 
 <@liferay.control_menu />
 
+
+<#include "${full_templates_path}/header.ftl" />
 <div class="container-fluid" id="wrapper">
-
-	<#include "${full_templates_path}/header.ftl" />
-
 	<#if has_navigation && is_setup_complete>
 		<#include "${full_templates_path}/navigation.ftl" />
 	</#if>
-
-	<section id="content">
+    <section id="content">
 		<h1 class="hide-accessible">${the_title}</h1>
 
 		<#if selectable>

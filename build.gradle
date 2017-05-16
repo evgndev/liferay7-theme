@@ -41,6 +41,6 @@ dependencies {
 }
 
 task deployTheme(type: Copy){
-	from(file('build/libs/theme.war'))
+	from(file('build/libs/liferay7-theme.war'))
 	into('C://_Work//_Serv//liferay-ce-portal-7.0-ga3/deploy')
 }

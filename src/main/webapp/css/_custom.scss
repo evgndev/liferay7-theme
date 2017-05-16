@@ -50,7 +50,92 @@ $reg: "MinionProRegular", sans-serif;
 $light: "RobotoLight", sans-serif;
 $italic: "RobotoItalic", sans-serif;
 
+.header {
+  background: url("../images/banner.jpg") no-repeat center bottom;
+  background-size: 100% auto;
+  height: 700px;
+  .container {
+    padding-top: 100px;
+    width: 1180px;
+    text-align: center;
+    .education {
+      color: white;
+      text-align: center;
+      .educationHeader {
+        font-family: $bold;
+        text-transform: uppercase;
+        font-size: 48px;
+        margin: 20px 10px;
+      }
+      .redLine {
+        width: 60px;
+        height: 5px;
+        background-color: #e42c2b;
+        margin: 10px 10px;
+        display: inline-block;
+      }
+      .educationText {
+        font-family: $light;
+        font-size: 20px;
+        margin: 20px 10px;
+      }
+      button {
+        padding: 23px 43px;
+        font-family: $bold;
+        text-transform: uppercase;
+        font-size: 20px;
+        background-color: #63b95f;
+        border-radius: 15px;
+        border: none;
+        margin: 20px 20px;
+      }
+      .educationWhyReg {
+        display: inline-block;
+        margin: 5px 10px;
+        &:hover .educationWhyRegTextWrapper {
+          display: block;
+        }
+        .educationWhyRegTextWrapper {
+          background-color: transparent;
+          position: absolute;
+          margin-left: -210px;
+          margin-top: -170px;
+          padding-bottom: 40px;
+          display: none;
+          z-index: 10;
+          .educationWhyRegTextBlock {
+            background-color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 30px;
+            p {
+              font-family: $light;
+              font-size: 16px;
+              color: #102a36;
+            }
+          }
+        }
+        > p {
+          font-family: $light;
+          font-size: 12px;
+          color: #aeaeae;
+          text-decoration: none; /* Убираем подчеркивание */
+          border-bottom: 1px dashed #aeaeae; /* Добавляем свою линию */
+          display: inline-block;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.header + #wrapper {
+  margin-top: -75px !important;
+}
+
 #wrapper {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
   width: 1180px;
   padding-left: 0 !important;
 }
