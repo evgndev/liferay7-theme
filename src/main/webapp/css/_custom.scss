@@ -1,0 +1,139 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+@font-face {
+  font-family: 'RobotoCondensedBold';
+  src: url('../fonts/RobotoCondensedBold.eot');
+  src: url('../fonts/RobotoCondensedBold.eot') format('embedded-opentype'),
+  url('../fonts/RobotoCondensedBold.woff2') format('woff2'),
+  url('../fonts/RobotoCondensedBold.woff') format('woff'),
+  url('../fonts/RobotoCondensedBold.ttf') format('truetype'),
+  url('../fonts/RobotoCondensedBold.svg#RobotoCondensedBold') format('svg');
+}
+
+@font-face {
+  font-family: 'MinionProRegular';
+  src: url('../fonts/MinionProRegular.eot');
+  src: url('../fonts/MinionProRegular.eot') format('embedded-opentype'),
+  url('../fonts/MinionProRegular.woff2') format('woff2'),
+  url('../fonts/MinionProRegular.woff') format('woff'),
+  url('../fonts/MinionProRegular.ttf') format('truetype'),
+  url('../fonts/MinionProRegular.svg#MinionProRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'RobotoLight';
+  src: url('../fonts/RobotoLight.eot');
+  src: url('../fonts/RobotoLight.eot') format('embedded-opentype'),
+  url('../fonts/RobotoLight.woff2') format('woff2'),
+  url('../fonts/RobotoLight.woff') format('woff'),
+  url('../fonts/RobotoLight.ttf') format('truetype'),
+  url('../fonts/RobotoLight.svg#RobotoLight') format('svg');
+}
+
+@font-face {
+  font-family: 'RobotoItalic';
+  src: url('../fonts/RobotoItalic.eot');
+  src: url('../fonts/RobotoItalic.eot') format('embedded-opentype'),
+  url('../fonts/RobotoItalic.woff2') format('woff2'),
+  url('../fonts/RobotoItalic.woff') format('woff'),
+  url('../fonts/RobotoItalic.ttf') format('truetype'),
+  url('../fonts/RobotoItalic.svg#RobotoItalic') format('svg');
+}
+
+$bold: "RobotoCondensedBold", sans-serif;
+$reg: "MinionProRegular", sans-serif;
+$light: "RobotoLight", sans-serif;
+$italic: "RobotoItalic", sans-serif;
+
+#wrapper {
+  width: 1180px;
+  padding-left: 0 !important;
+}
+
+nav#navigation {
+  background-color: #025ea8;
+  //main tab
+  > ul {
+    padding-left: 12px;
+    > li {
+      display: inline-block;
+      padding: 25px 38px;
+      margin: 0;
+      color: white;
+      > a {
+        font-family: $bold;
+        text-transform: uppercase;
+        font-size: 18px;
+      }
+      .delete-tab {
+        color: white;
+        font-weight: normal;
+        right: 20px;
+        top: 18px;
+        text-shadow: none;
+        margin: 0;
+        &:hover {
+          color: #ff8300;
+          background-color: transparent;
+          text-shadow: none;
+        }
+      }
+    }
+  }
+  //all tabs
+  li {
+    list-style-type: none;
+    padding: 12px 30px;
+    &:hover {
+      color: #00a1ed;
+    }
+    > ul.child-menu {
+      padding: 15px 0;
+      background-color: white;
+      color: black;
+      font-family: $light;
+      font-size: 14px;
+      display: none;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      width: 260px;
+      z-index: 3;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      &:hover {
+        display: block;
+      }
+    }
+    > a {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      &:hover {
+        text-decoration: none;
+        background-color: transparent;
+      }
+    }
+    &:hover {
+      > ul.child-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+//language portlet
+.portlet-boundary_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_ {
+  .portlet-content {
+    background: none;
+    border: none;
+  }
+  .lexicon-icon {
+    height: 30px;
+    width: 30px;
+  }
+}
