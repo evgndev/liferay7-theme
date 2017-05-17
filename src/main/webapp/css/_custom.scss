@@ -50,6 +50,10 @@ $reg: "MinionProRegular", sans-serif;
 $light: "RobotoLight", sans-serif;
 $italic: "RobotoItalic", sans-serif;
 
+body {
+  background-color: #f6f6f6;
+}
+
 .header {
   background: url("../images/banner.jpg") no-repeat center bottom;
   background-size: 100% auto;
@@ -134,10 +138,11 @@ $italic: "RobotoItalic", sans-serif;
 }
 
 #wrapper {
+  background-color: white;
   padding-top: 0 !important;
   margin-top: 0 !important;
   width: 1180px;
-  padding-left: 0 !important;
+  padding-left: 0 !important´;
 }
 
 nav#navigation {
