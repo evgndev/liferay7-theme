@@ -49,19 +49,48 @@ $bold: "RobotoCondensedBold", sans-serif;
 $reg: "MinionProRegular", sans-serif;
 $light: "RobotoLight", sans-serif;
 $italic: "RobotoItalic", sans-serif;
+$width: 1180px;
+
+p {
+  margin: 0 !important;
+}
 
 body {
   background-color: #f6f6f6;
 }
 
+#ControlMenu {
+  width: 180px;
+}
+
 .header {
   background: url("../images/banner.jpg") no-repeat center bottom;
-  background-size: 100% auto;
-  height: 700px;
+  background-size: auto 100%;
+  height: 760px;
   .container {
-    padding-top: 100px;
-    width: 1180px;
+    width: $width;
     text-align: center;
+    .withLogo {
+      color: white;
+      .writeUs {
+        font-family: $light;
+        .writeUsBtn {
+          font-size: 13px;
+        }
+        .writeUsText {
+          font-size: 12px;
+          display: inline-block;
+        }
+      }
+      .logo {
+        text-align: center;
+      }
+      .logoRight {
+        font-family: $bold;
+        text-transform: uppercase;
+        font-size: 15px;
+      }
+    }
     .education {
       color: white;
       text-align: center;
@@ -69,49 +98,49 @@ body {
         font-family: $bold;
         text-transform: uppercase;
         font-size: 48px;
-        margin: 20px 10px;
+        margin: 20px 10px 6px 10px;
       }
       .redLine {
         width: 60px;
         height: 5px;
         background-color: #e42c2b;
-        margin: 10px 10px;
         display: inline-block;
       }
       .educationText {
         font-family: $light;
         font-size: 20px;
-        margin: 20px 10px;
+        line-height: 1.2;
+        margin: 15px 10px;
       }
       button {
-        padding: 23px 43px;
+        padding: 20px 43px;
         font-family: $bold;
         text-transform: uppercase;
         font-size: 20px;
-        background-color: #63b95f;
+        background-color: #82b865;
         border-radius: 15px;
         border: none;
-        margin: 20px 20px;
+        margin: 15px 20px;
       }
       .educationWhyReg {
         display: inline-block;
-        margin: 5px 10px;
+        margin: 0 10px;
         &:hover .educationWhyRegTextWrapper {
           display: block;
         }
         .educationWhyRegTextWrapper {
           background-color: transparent;
           position: absolute;
-          margin-left: -210px;
-          margin-top: -170px;
+          margin-left: -222px;
+          margin-top: -160px;
           padding-bottom: 40px;
           display: none;
           z-index: 10;
           .educationWhyRegTextBlock {
             background-color: white;
             border: none;
-            border-radius: 15px;
-            padding: 30px;
+            border-radius: 8px;
+            padding: 32px;
             p {
               font-family: $light;
               font-size: 16px;
@@ -133,26 +162,22 @@ body {
   }
 }
 
-.header + #wrapper {
-  margin-top: -75px !important;
-}
-
-#wrapper {
-  background-color: white;
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  width: 1180px;
-  padding-left: 0 !important´;
+.header + #navigation {
+  margin-top: -80px !important;
 }
 
 nav#navigation {
+  width: $width;
+  margin-right: auto;
+  margin-left: auto;
   background-color: #025ea8;
   //main tab
   > ul {
     padding-left: 12px;
     > li {
+      height: 80px;
       display: inline-block;
-      padding: 25px 38px;
+      padding: 30px 38px;
       margin: 0;
       color: white;
       > a {
@@ -214,6 +239,14 @@ nav#navigation {
       }
     }
   }
+}
+
+#wrapper {
+  background-color: white !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  top: -10px;
+  width: $width;
 }
 
 //language portlet
