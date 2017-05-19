@@ -26,7 +26,7 @@
                     language
                 </div>
                 <div class="privateArea">
-                    <a href="/c/portal/login">Личный кабинет</a>&nbsp;/&nbsp;<a href="/registration">Регистрация</a>
+                    <a href="/login">Личный кабинет</a>&nbsp;/&nbsp;<a href="/registration">Регистрация</a>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
                 </p>
             </div>
 
-            <button>Зарегистрироваться на сайте</button>
+            <button class="registrationButton" onclick="location.href='/registration';">Зарегистрироваться на сайте</button>
             <br>
             <div class="educationWhyReg">
                 <div class="educationWhyRegTextWrapper">
