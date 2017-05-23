@@ -3,14 +3,12 @@
         <div class="row withLogo">
             <div class="col-md-3 col-md-offset-1">
                 <div class="writeUs">
-                    <button class="writeUsBtn">
-                        Написать нам
+                    <button class="writeUsBtn" onclick="location.href='mailto:info@russiaeasy.org';">
+                    <@liferay.language key="theme.writeUsButton" />
                     </button>
                     <div class="writeUsText">
                         <p>
-                            ← Задайте любой вопрос
-                            <br>
-                            прямо сейчас
+                            ← <@liferay.language key="theme.header.writeUsHint" />
                         </p>
                     </div>
                 </div>
@@ -23,19 +21,35 @@
             </div>
             <div class="logoRight col-md-3">
                 <div class="lang">
-                    language
+                <@liferay_portlet["runtime"]
+                        defaultPreferences=default_preferences
+                        portletProviderAction=portletProviderAction.VIEW
+                        portletProviderClassName="com.liferay.portal.kernel.servlet.taglib.ui.LanguageEntry"
+                />
                 </div>
                 <div class="privateArea">
-                    <a href="/login">Личный кабинет</a>&nbsp;/&nbsp;<a href="/registration">Регистрация</a>
+
+                    <#if is_signed_in>
+                        <a href="/c/portal/logout"><@liferay.language key="sign-out" /></a>
+                    </#if>
+                    <#if !is_signed_in>
+                    <a href="/login"><img src="/o/liferay7-theme/images/russiaeasy/key.png"/>
+                        <@liferay.language key="sign-in" />
+                    </a>
+                    &nbsp;/&nbsp;
+                    <a href="/registration">
+                        <@liferay.language key="sign-up" />
+                    </a>
+                    </#if>
                 </div>
             </div>
         </div>
         <div class="education">
             <div class="educationHeader">
                 <p>
-                    Качественное и доступное
+                    <@liferay.language key="theme.header.mainText.part1" />
                     <br>
-                    образование в России
+                    <@liferay.language key="theme.header.mainText.part2" />
                 </p>
             </div>
             <div class="redLine">
@@ -43,30 +57,34 @@
             </div>
             <div class="educationText">
                 <p>
-                    Простой способ поступить в лучшие российские Университеты.
+                    <@liferay.language key="theme.header.mainTextNext.part1" />
                     <br>
-                    Онлайн. Без дополнительных комиссий.
+                    <@liferay.language key="theme.header.mainTextNext.part2" />
                 </p>
             </div>
 
-            <button class="registrationButton" onclick="location.href='/registration';">Зарегистрироваться на сайте</button>
-            <br>
-            <div class="educationWhyReg">
-                <div class="educationWhyRegTextWrapper">
-                    <div class="educationWhyRegTextBlock">
-                        <p>
-                            Регистрация на сайте дает доступ к программам университетов,
-                            <br>
-                            ценам и полному документообороту по отбору, въезду и поступлению.
-                            <br>
-                            Вы сможете оставлять заявки, общаться с представителями
-                            <br>
-                            университетов и выбирать лучший вариант.
-                        </p>
+            <#if !is_signed_in>
+                <button class="registrationButton" onclick="location.href='/registration';">
+                    <@liferay.language key="theme.registrationButton" />
+                </button>
+                <br>
+                <div class="educationWhyReg">
+                    <div class="educationWhyRegTextWrapper">
+                        <div class="educationWhyRegTextBlock">
+                            <p>
+                                <@liferay.language key="theme.header.whyRegistrationHint.1" />
+                                <br>
+                                <@liferay.language key="theme.header.whyRegistrationHint.2" />
+                                <br>
+                                <@liferay.language key="theme.header.whyRegistrationHint.3" />
+                                <br>
+                                <@liferay.language key="theme.header.whyRegistrationHint.4" />
+                            </p>
+                        </div>
                     </div>
+                    <p><@liferay.language key="theme.header.whyRegistrationLink" /></p>
                 </div>
-                <p>Зачем нужна регистрация?</p>
-            </div>
+            </#if>
         </div>
     </div>
 </div>

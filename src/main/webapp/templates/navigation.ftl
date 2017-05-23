@@ -45,7 +45,13 @@
 			</li>
 		</#list>
 		<li class="writeUsOnNav">
-			<p>Написать нам</p>
+			<button onclick="location.href='mailto:info@russiaeasy.org';"><@liferay.language key="theme.writeUsButton" /></button>
 		</li>
+
+		<#--<li>-->
+			<#--<div class="navbar-form navbar-right" role="search">-->
+				<#--<@liferay.search/>-->
+			<#--</div>-->
+		<#--</li>-->
 	</ul>
 </nav>

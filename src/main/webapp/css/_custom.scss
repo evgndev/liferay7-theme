@@ -58,6 +58,7 @@ h1 {
   line-height: 64px;
   color: #102a36;
 }
+
 h2 {
   font-family: $bold;
   text-transform: uppercase;
@@ -65,24 +66,28 @@ h2 {
   line-height: 40px;
   color: #102a36;
 }
+
 h3 {
   font-family: $light;
   font-size: 32px;
   line-height: 46px;
   color: #102a36;
 }
+
 h4 {
   font-family: $light;
   font-size: 21px;
   line-height: 32px;
   color: #102a36;
 }
+
 h5 {
   font-family: $light;
   font-size: 16px;
   line-height: 24px;
   color: #102a36;
 }
+
 //p {
 //  margin: 0 !important;
 //  font-family: $light;
@@ -107,6 +112,19 @@ body {
 
 #ControlMenu {
   width: 180px;
+  background-color: #18272e;
+  border: 1px solid #18272e;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.emailQuestionForm {
+  border: 1px solid #025ea8;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .registrationButton {
@@ -120,9 +138,11 @@ body {
   border: none;
   outline: none;
 }
+
 .registrationButton:hover {
   background-color: #4ecf47;
 }
+
 .registrationButton:active {
   background-color: #4c9a48;
 }
@@ -140,7 +160,11 @@ div#portalMessageContainer.alert-info.alert-warning {
     text-align: center;
     .withLogo {
       color: white;
+      .col-md-3.col-md-offset-1 {
+        width: 300px !important;
+      }
       .writeUs {
+        width: 300px !important;
         padding-top: 40px;
         padding-bottom: 40px;
         border-bottom: white 1px solid;
@@ -153,10 +177,16 @@ div#portalMessageContainer.alert-info.alert-warning {
           background-color: transparent;
           border-radius: 5px;
           font-size: 13px;
+          outline: none;
+          &:hover {
+            background-color: #00aaf7;
+          }
         }
         .writeUsText {
           font-size: 12px;
+          line-height: 18px !important;
           display: inline-block;
+          width: 150px;
         }
       }
       .logo {
@@ -165,19 +195,33 @@ div#portalMessageContainer.alert-info.alert-warning {
       .logoRight {
         text-align: right;
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 25px;
         border-bottom: white 1px solid;
         .lang {
           font-family: $light;
           font-size: 12px;
           text-decoration: underline;
-
+          .portlet-body {
+            font-size: 0;
+            svg {
+              margin-left: 5px;
+            }
+            a > svg > rect:first-child {
+              fill: transparent;
+            }
+            span > svg > rect:first-child {
+              fill: #00aaf7;
+            }
+          }
         }
         .privateArea {
-          padding-top: 25px;
+          padding-top: 5px;
           font-family: $bold;
           font-size: 15px;
           color: white;
+          img {
+            margin: 0 6px 4px 0;
+          }
           a {
             color: white;
             &:hover {
@@ -195,6 +239,7 @@ div#portalMessageContainer.alert-info.alert-warning {
         font-family: $bold;
         text-transform: uppercase;
         font-size: 48px;
+        line-height: 64px !important;
         margin: 20px 10px 6px 10px;
       }
       .redLine {
@@ -222,7 +267,7 @@ div#portalMessageContainer.alert-info.alert-warning {
           background-color: transparent;
           position: absolute;
           margin-left: -222px;
-          margin-top: -160px;
+          margin-top: -170px;
           padding-bottom: 40px;
           display: none;
           z-index: 10;
@@ -256,7 +301,7 @@ div#portalMessageContainer.alert-info.alert-warning {
 }
 
 .header + #navigation {
-  margin-top: -80px !important;
+  margin-top: -77px !important;
 }
 
 nav#navigation {
@@ -268,9 +313,9 @@ nav#navigation {
   > ul {
     padding-left: 12px;
     > li {
-      height: 80px;
+      height: 75px;
       display: inline-block;
-      padding: 30px 38px;
+      padding: 25px 38px;
       margin: 0;
       color: white;
       > a {
@@ -332,20 +377,19 @@ nav#navigation {
       }
     }
   }
-  li.writeUsOnNav {
+  li.writeUsOnNav button {
+    border: none;
+    outline: none;
     background-color: #0093d5;
     border-radius: 7px;
-    padding: 7px 30px;
-    height: 35px;
-    p {
-      font-family: $bold;
-      text-transform: uppercase;
-      font-size: 16px;
-    }
+    padding: 0 30px;
+    height: 30px;
+    font-family: $bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: white;
     &:hover {
-      cursor: pointer;
-      background-color: #4579ae;
-      color: white;
+      background-color: #00aaf7;
     }
   }
 }
