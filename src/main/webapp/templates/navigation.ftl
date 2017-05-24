@@ -52,6 +52,8 @@
 		<div class="searchField">
 			<@liferay.search/>
 		</div>
-        <button class="searchBtn" onClick="theme.toggleSearch()"></button>
+        <button class="searchBtn" onClick="theme.toggleSearch()">
+			<img src="/o/liferay7-theme/images/russiaeasy/search.png" alt="search">
+		</button>
     </div>
 </nav>

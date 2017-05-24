@@ -446,17 +446,26 @@ nav#navigation {
     width: 1180px;
 
     &.active .searchBtn {
-      background: url('../images/russiaeasy/close.png') no-repeat center center #025ea8;
+      background-color: red;
+      img {
+        content:url('../images/russiaeasy/close.png') !important;
+      }
     }
     .searchBtn {
       float: right;
       width: 75px;
       height: 75px;
-      background: url('../images/russiaeasy/search.png') no-repeat center center red;
+      background-color: #025ea8;
       display: inline-block;
       vertical-align: top;
       border: none;
       outline: none;
+      img {
+        content:url('../images/russiaeasy/search.png');
+      }
+      &:hover img {
+        opacity: 0.5;
+      }
     }
 
     &.active .searchField {
@@ -484,11 +493,15 @@ nav#navigation {
             input.search-input {
               height: 46px;
               border-radius: 25px;
+              padding: 0 22px;
             }
           }
           .field-wrapper {
-            margin-left: -120px;
-            height: 35px;
+            float: right;
+            margin-top: -59px;
+            width: 40px;
+            height: 43px;
+            padding: 4px;
           }
         }
       }
