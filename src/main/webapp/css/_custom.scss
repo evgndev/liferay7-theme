@@ -110,6 +110,39 @@ body {
   color: #102a36;
 }
 
+// Searching
+#_com_liferay_portal_search_web_portlet_SearchPortlet_facetNavigation {
+  display: none;
+}
+
+#_com_liferay_portal_search_web_portlet_SearchPortlet_searchContainer {
+  > div > div {
+    vertical-align: middle;
+  }
+}
+
+#_com_liferay_portal_search_web_portlet_SearchPortlet_fm {
+  margin-left: 40px;
+  .lfr-search-container-wrapper.main-content-body {
+    margin-top: 0;
+  }
+  .searchcontainer-content {
+    .list-group-item {
+      .list-group-item-field {
+        display: none;
+        border: none;
+      }
+      .list-group-item-content {
+        border: none;
+        h6.text-default:first-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//menu
 #ControlMenu {
   width: 180px;
   background-color: #18272e;
@@ -118,6 +151,19 @@ body {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+/* Hide footer */
+footer, #footer {
+  display: none !important;
+}
+
+/* Hide portlet header */
+.portlet:not(#portlet_password-reminder):not(#portlet_new-password) h2.portlet-title-text {
+  display: none !important;
+}
+h2.portlet-title-editable {
+  display: none;
 }
 
 .emailQuestionForm {
@@ -338,6 +384,7 @@ nav#navigation {
       }
     }
   }
+
   //all tabs
   li {
     list-style-type: none;
@@ -390,6 +437,61 @@ nav#navigation {
     color: white;
     &:hover {
       background-color: #00aaf7;
+    }
+  }
+
+  .searchView {
+    position: absolute;
+    margin-top: -86px;
+    width: 1180px;
+
+    &.active .searchBtn {
+      background: url('../images/russiaeasy/close.png') no-repeat center center #025ea8;
+    }
+    .searchBtn {
+      float: right;
+      width: 75px;
+      height: 75px;
+      background: url('../images/russiaeasy/search.png') no-repeat center center red;
+      display: inline-block;
+      vertical-align: top;
+      border: none;
+      outline: none;
+    }
+
+    &.active .searchField {
+      display: inline-block !important;
+    }
+    .searchField {
+      display: none;
+      //width: 100%;
+      width: 1100px;
+      margin-top: -2px;
+      vertical-align: top;
+      margin-right: -79px;
+      padding: 0!important;
+      #p_p_id_com_liferay_portal_search_web_portlet_SearchPortlet_ {
+        display: block !important;
+      }
+      .portlet-search {
+        margin-top: 15px;
+        vertical-align: middle;
+        form {
+          margin-left: 20px;
+
+          .input-text-wrapper {
+            width: 100%;
+            input.search-input {
+              height: 46px;
+              border-radius: 25px;
+            }
+          }
+          .field-wrapper {
+            margin-left: -120px;
+            height: 35px;
+          }
+        }
+      }
     }
   }
 }

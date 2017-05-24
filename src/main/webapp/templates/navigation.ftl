@@ -47,11 +47,11 @@
 		<li class="writeUsOnNav">
 			<button onclick="location.href='mailto:info@russiaeasy.org';"><@liferay.language key="theme.writeUsButton" /></button>
 		</li>
-
-		<#--<li>-->
-			<#--<div class="navbar-form navbar-right" role="search">-->
-				<#--<@liferay.search/>-->
-			<#--</div>-->
-		<#--</li>-->
 	</ul>
+    <div class="searchView" id="searchView">
+		<div class="searchField">
+			<@liferay.search/>
+		</div>
+        <button class="searchBtn" onClick="theme.toggleSearch()"></button>
+    </div>
 </nav>

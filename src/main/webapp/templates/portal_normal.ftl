@@ -8,7 +8,8 @@
     <title>${the_title} - ${company_name}</title>
 
     <meta content="initial-scale=1.0, width=device-width" name="viewport"/>
-
+    <script src="/o/liferay7-theme/js/jquery-3.2.1.js"></script>
+    <script src="/o/liferay7-theme/js/theme.js"></script>
 <@liferay_util["include"] page=top_head_include />
 </head>
 
@@ -22,7 +23,7 @@
 
 <#include "${full_templates_path}/header.ftl" />
 <#if has_navigation && is_setup_complete>
-        <#include "${full_templates_path}/navigation.ftl" />
+    <#include "${full_templates_path}/navigation.ftl" />
 </#if>
 <div class="container-fluid" id="wrapper">
     <section id="content">
@@ -53,5 +54,4 @@
 <@liferay_util["include"] page=bottom_include />
 
 </body>
-
 </html>
