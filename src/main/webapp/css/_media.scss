@@ -1,0 +1,117 @@
+@media screen and (max-width: 1100px) {
+  body.russiaeasyBody {
+    .header .container, #privateAreaHeader, #navigation, #wrapper {
+      width: 768px
+    }
+    nav#navigation .searchView .searchField {
+      width: 700px;
+    }
+
+    .header .withLogo {
+      .logoLeft {
+        width: 150px !important;
+      }
+      .logoRight {
+        width: 150px !important;
+      }
+    }
+    #privateAreaHeader {
+      text-align: right;
+      padding: 20px;
+      .areaSiteLabel {
+        padding-left: 30px;
+        width: 400px;
+        text-align: left;
+      }
+    }
+    .userArea {
+      &:hover .privateAreaList {
+        display: block;
+      }
+      .privateAreaList {
+        display: none;
+      }
+    }
+    #wrapper .portlet-dropzone .portlet-boundary:not(.fullSizeContent) {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body.russiaeasyBody {
+    .header .container, #privateAreaHeader, nav#navigation, #wrapper {
+      width: 320px
+    }
+    nav#navigation .searchView .searchField {
+      width: 280px;
+    }
+    .shortLogo {
+      display: block;
+      height: 60px;
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: right;
+      > div {
+        display: inline-block;
+      }
+      .lang {
+        width: 50px;
+        vertical-align: top;
+        text-align: center;
+      }
+      .log-in {
+        width: 60px;
+        background-color: #63b95f;
+        height: 60px;
+        vertical-align: middle;
+        text-align: center;
+        padding-top: 20px;
+      }
+    }
+    .header {
+      background: url(../images/russiaeasy/banner.jpg) no-repeat 65% bottom;
+      width: 320px;
+      height: 570px;
+      margin-left: auto;
+      margin-right: auto;
+      .education {
+        .educationWhyReg {
+          display: none;
+        }
+        h1 {
+          font-size: 32px;
+          line-height: 40px;
+        }
+      }
+
+      .withLogo {
+        display: none;
+      }
+    }
+
+    nav#navigation {
+      .searchField form {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 2px;
+      }
+    }
+    #wrapper {
+      .portlet-dropzone .portlet-boundary:not(.fullSizeContent) {
+        margin: 5px;
+        padding: 5px;
+      }
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}

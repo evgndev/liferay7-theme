@@ -1,25 +1,14 @@
-function toggleSearch() {
-    var _searchView = jQuery("#searchView");
-    console.log('TEST searchView.length', _searchView.length);
-    if (_searchView.length) {
-        console.log('TEST _searchView.hasClass("active")', _searchView.hasClass("active"));
-        _searchView.toggleClass("active")
-    }
-}
-
 var theme = (function () {
     var me = {},
-        _searchView = undefined;
-
-    $(document).ready(function () {
-        _searchView = $("#searchView")
-    });
-
+        _searchView = undefined,
+        _searchBtn = undefined;
+  
     me.toggleSearch = function () {
-        console.log('TEST searchView.length', _searchView.length);
+        _searchView = $("#searchView");
+        _searchBtn = $("#searchBtn");
         if (_searchView.length) {
-            console.log('TEST _searchView.hasClass("active")', _searchView.hasClass("active"));
-            _searchView.toggleClass("active")
+            _searchView.toggleClass("active");
+            _searchBtn.toggleClass("active");
         }
     };
 

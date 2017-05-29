@@ -1,0 +1,192 @@
+$bold: "RobotoCondensedBold", sans-serif;
+$light: "RobotoLight", sans-serif;
+$italic: "RobotoItalic", sans-serif;
+$width: 1180px;
+$widthMiddle: 768px;
+$widthLow: 320px;
+
+nav#navigation {
+  padding-right: 60px;
+  width: $width;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #025ea8;
+  //main tab
+  > ul {
+    padding-left: 12px;
+    margin-bottom: 0;
+    > li {
+      height: 60px;
+      display: inline-block;
+      padding: 18px 38px 0 38px;
+      margin: 0;
+      color: white;
+      border: none;
+      position: relative;
+      .lexicon-icon-bars {
+        display: none;
+      }
+      > a {
+        font-family: $bold;
+        text-transform: uppercase;
+        font-size: 18px;
+      }
+      &:hover .delete-tab {
+        opacity: 1;
+      }
+      .delete-tab {
+        color: white;
+        right: 20px;
+        top: 10px;
+        text-shadow: none;
+        margin: 0;
+        background-color: transparent;
+        font-size: 22px;
+        line-height: 20px;
+        position: absolute;
+        opacity: 0;
+        &:hover {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+
+  //all tabs
+  li {
+    list-style-type: none;
+    padding: 12px 30px;
+    &:hover {
+      color: #00a1ed;
+    }
+    > ul.child-menu {
+      padding: 15px 0;
+      background-color: white;
+      color: black;
+      font-family: $light;
+      font-size: 14px;
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 8px;
+      width: 260px;
+      z-index: 3;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      &:hover {
+        display: block;
+      }
+    }
+    > a {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      &:hover {
+        text-decoration: none;
+        background-color: transparent;
+      }
+    }
+    &:hover {
+      > ul.child-menu {
+        display: block;
+      }
+    }
+  }
+  li.writeUsOnNav {
+    height: 44px !important;
+    padding: 0 0 0 0 !important;
+    margin-top: 16px;
+    button {
+      border: none;
+      outline: none;
+      background-color: #0093d5;
+      border-radius: 7px;
+      padding: 3px 30px;
+      height: 30px;
+      font-family: $bold;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: white;
+      &:hover {
+        background-color: #00aaf7;
+      }
+    }
+  }
+
+  #searchBtn {
+    float: right;
+    width: 60px;
+    height: 60px;
+    background-color: #e42c2b;
+    display: inline-block;
+    margin-top: -60px;
+    margin-right: -60px;
+    border: none;
+    outline: none;
+    img {
+      content: url('../images/russiaeasy/search.png');
+    }
+    &:hover {
+      background-color: #ff3130;
+    }
+    &.active {
+      background-color: #025ea8 !important;
+      img {
+        content: url('../images/russiaeasy/close.png') !important;
+      }
+      &:hover img {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .searchView {
+    position: absolute;
+    margin-top: -60px;
+
+    &.active .searchField {
+      display: inline-block !important;
+    }
+    .searchField {
+      display: none;
+      width: 1120px;
+      margin-top: 10px;
+      vertical-align: top;
+      margin-right: -79px;
+      padding: 0 !important;
+      #p_p_id_com_liferay_portal_search_web_portlet_SearchPortlet_ {
+        display: block !important;
+        div.portlet-content {
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+      }
+      .portlet-search {
+        margin-top: 0;
+        vertical-align: middle;
+        form {
+          margin-left: 20px;
+
+          .input-text-wrapper {
+            width: 100%;
+            input.search-input {
+              height: 38px;
+              border-radius: 25px;
+              padding: 0 22px;
+            }
+          }
+          .field-wrapper {
+            float: right;
+            margin-top: -54px;
+            width: 40px;
+            height: 0;
+            padding: 4px;
+            margin-bottom: 0;
+          }
+          .taglib-empty-result-message {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

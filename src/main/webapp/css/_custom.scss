@@ -16,16 +16,6 @@
 }
 
 @font-face {
-  font-family: 'MinionProRegular';
-  src: url('../fonts/MinionProRegular.eot');
-  src: url('../fonts/MinionProRegular.eot') format('embedded-opentype'),
-  url('../fonts/MinionProRegular.woff2') format('woff2'),
-  url('../fonts/MinionProRegular.woff') format('woff'),
-  url('../fonts/MinionProRegular.ttf') format('truetype'),
-  url('../fonts/MinionProRegular.svg#MinionProRegular') format('svg');
-}
-
-@font-face {
   font-family: 'RobotoLight';
   src: url('../fonts/RobotoLight.eot');
   src: url('../fonts/RobotoLight.eot') format('embedded-opentype'),
@@ -46,68 +36,59 @@
 }
 
 $bold: "RobotoCondensedBold", sans-serif;
-$reg: "MinionProRegular", sans-serif;
 $light: "RobotoLight", sans-serif;
 $italic: "RobotoItalic", sans-serif;
 $width: 1180px;
+$widthMiddle: 768px;
+$widthLow: 320px;
 
-h1 {
-  font-family: $bold;
-  text-transform: uppercase;
-  font-size: 48px;
-  line-height: 64px;
-  color: #102a36;
-}
-
-h2 {
-  font-family: $bold;
-  text-transform: uppercase;
-  font-size: 32px;
-  line-height: 40px;
-  color: #102a36;
-}
-
-h3 {
+body.russiaeasyBody {
   font-family: $light;
-  font-size: 32px;
-  line-height: 46px;
-  color: #102a36;
-}
-
-h4 {
-  font-family: $light;
-  font-size: 21px;
-  line-height: 32px;
-  color: #102a36;
-}
-
-h5 {
-  font-family: $light;
-  font-size: 16px;
+  background-color: #f6f6f6;
+  font-size: 14px;
   line-height: 24px;
   color: #102a36;
+  h1 {
+    font-family: $bold;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 64px;
+    color: #102a36;
+  }
+  h2 {
+    font-family: $bold;
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 40px;
+    color: #102a36;
+  }
+  h3 {
+    font-family: $light;
+    font-size: 32px;
+    line-height: 46px;
+    color: #102a36;
+  }
+  h4 {
+    font-family: $light;
+    font-size: 21px;
+    line-height: 32px;
+    color: #102a36;
+  }
+  h5 {
+    font-family: $light;
+    font-size: 16px;
+    line-height: 24px;
+    color: #102a36;
+  }
+  p {
+    color: #102a36;
+  }
 }
-
-//p {
-//  margin: 0 !important;
-//  font-family: $light;
-//  font-size: 14px;
-//  line-height: 24px;
-//  color: #102a36;
-//}
 
 .redLine {
   width: 60px;
   height: 5px;
   background-color: #e42c2b;
-}
-
-body {
-  background-color: #f6f6f6;
-  font-family: $light;
-  font-size: 14px;
-  line-height: 24px;
-  color: #102a36;
 }
 
 // Searching
@@ -121,21 +102,26 @@ body {
   }
 }
 
-#_com_liferay_portal_search_web_portlet_SearchPortlet_fm {
-  margin-left: 40px;
-  .lfr-search-container-wrapper.main-content-body {
-    margin-top: 0;
+#portlet_com_liferay_portal_search_web_portlet_SearchPortlet {
+  .portlet-icon-back {
+    display: none;
   }
-  .searchcontainer-content {
-    .list-group-item {
-      .list-group-item-field {
-        display: none;
-        border: none;
-      }
-      .list-group-item-content {
-        border: none;
-        h6.text-default:first-child {
+  form {
+    margin-left: 40px;
+    .lfr-search-container-wrapper.main-content-body {
+      margin-top: 0;
+    }
+    .searchcontainer-content {
+      li.list-group-item {
+        .list-group-item-field {
           display: none;
+          border: none;
+        }
+        .list-group-item-content {
+          border: none;
+          h6:first-child {
+            display: none;
+          }
         }
       }
     }
@@ -144,13 +130,16 @@ body {
 
 //menu
 #ControlMenu {
+  display: none;
   width: 180px;
+  height: 60px;
   background-color: #18272e;
   border: 1px solid #18272e;
-  border-radius: 5px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 0;
+  border-radius: 0;;
+  ul {
+    margin-top: -3px;
+    width: auto;
+  }
 }
 
 /* Hide footer */
@@ -162,359 +151,33 @@ footer, #footer {
 .portlet:not(#portlet_password-reminder):not(#portlet_new-password) h2.portlet-title-text {
   display: none !important;
 }
+
 h2.portlet-title-editable {
   display: none;
 }
 
-.emailQuestionForm {
-  border: 1px solid #025ea8;
-  border-radius: 5px;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+//alerts
+.lfr-notification-wrapper.in {
+  height: auto !important;
 }
 
-.registrationButton {
-  padding: 10px;
-  font-family: "RobotoCondensedBold", sans-serif;
-  font-size: 21px;
-  text-transform: uppercase;
-  color: white;
-  background-color: #63b95f;
-  border-radius: 7px;
-  border: none;
-  outline: none;
-}
-
-.registrationButton:hover {
-  background-color: #4ecf47;
-}
-
-.registrationButton:active {
-  background-color: #4c9a48;
-}
-
-div#portalMessageContainer.alert-info.alert-warning {
-  display: none;
-}
-
-.header {
-  background: url("../images/russiaeasy/banner.jpg") no-repeat center bottom;
-  background-size: auto 100%;
-  height: 760px;
-  .container {
-    width: $width;
-    text-align: center;
-    .withLogo {
-      color: white;
-      .col-md-3.col-md-offset-1 {
-        width: 300px !important;
-      }
-      .writeUs {
-        width: 300px !important;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        border-bottom: white 1px solid;
-        font-family: $light;
-        .writeUsBtn {
-          vertical-align: top;
-          margin-right: 10px;
-          padding: 5px 10px;
-          border: white 1px solid;
-          background-color: transparent;
-          border-radius: 5px;
-          font-size: 13px;
-          outline: none;
-          &:hover {
-            background-color: #00aaf7;
-          }
-        }
-        .writeUsText {
-          font-size: 12px;
-          line-height: 18px !important;
-          display: inline-block;
-          width: 150px;
-        }
-      }
-      .logo {
-        text-align: center;
-      }
-      .logoRight {
-        text-align: right;
-        padding-top: 30px;
-        padding-bottom: 25px;
-        border-bottom: white 1px solid;
-        .lang {
-          font-family: $light;
-          font-size: 12px;
-          text-decoration: underline;
-          .portlet-body {
-            font-size: 0;
-            svg {
-              margin-left: 5px;
-            }
-            a > svg > rect:first-child {
-              fill: transparent;
-            }
-            span > svg > rect:first-child {
-              fill: #00aaf7;
-            }
-          }
-        }
-        .privateArea {
-          padding-top: 5px;
-          font-family: $bold;
-          font-size: 15px;
-          color: white;
-          img {
-            margin: 0 6px 4px 0;
-          }
-          a {
-            color: white;
-            &:hover {
-              color: #0093d5;
-              text-decoration: none;
-            }
-          }
-        }
-      }
+//language portlet
+.lang {
+  font-family: $light;
+  font-size: 12px;
+  text-decoration: underline;
+  .portlet-body {
+    font-size: 0;
+    svg {
+      margin-left: 5px;
     }
-    .education {
-      color: white;
-      text-align: center;
-      .educationHeader {
-        font-family: $bold;
-        text-transform: uppercase;
-        font-size: 48px;
-        line-height: 64px !important;
-        margin: 20px 10px 6px 10px;
-      }
-      .redLine {
-        display: inline-block;
-      }
-      .educationText {
-        font-family: $light;
-        font-size: 20px;
-        line-height: 1.2;
-        margin: 15px 10px;
-      }
-      button.registrationButton {
-        padding: 20px 43px;
-        font-size: 20px;
-        border-radius: 15px;
-        margin: 15px 20px;
-      }
-      .educationWhyReg {
-        display: inline-block;
-        margin: 0 10px;
-        &:hover .educationWhyRegTextWrapper {
-          display: block;
-        }
-        .educationWhyRegTextWrapper {
-          background-color: transparent;
-          position: absolute;
-          margin-left: -222px;
-          margin-top: -170px;
-          padding-bottom: 40px;
-          display: none;
-          z-index: 10;
-          .educationWhyRegTextBlock {
-            background-color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 32px;
-            p {
-              font-family: $light;
-              font-size: 16px;
-              color: #102a36;
-            }
-          }
-        }
-        > p {
-          font-family: $light;
-          font-size: 12px;
-          color: #aeaeae;
-          text-decoration: none; /* Убираем подчеркивание */
-          border-bottom: 1px dashed #aeaeae; /* Добавляем свою линию */
-          display: inline-block;
-          margin: 0;
-          &:hover {
-            color: #0093d5;
-          }
-        }
-      }
+    a > svg > rect:first-child {
+      fill: transparent;
+    }
+    span > svg > rect:first-child {
+      fill: #00aaf7;
     }
   }
-}
-
-.header + #navigation {
-  margin-top: -77px !important;
-}
-
-nav#navigation {
-  width: $width;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #025ea8;
-  //main tab
-  > ul {
-    padding-left: 12px;
-    > li {
-      height: 75px;
-      display: inline-block;
-      padding: 25px 38px;
-      margin: 0;
-      color: white;
-      > a {
-        font-family: $bold;
-        text-transform: uppercase;
-        font-size: 18px;
-      }
-      .delete-tab {
-        color: white;
-        font-weight: normal;
-        right: 20px;
-        top: 18px;
-        text-shadow: none;
-        margin: 0;
-        &:hover {
-          color: #ff8300;
-          background-color: transparent;
-          text-shadow: none;
-        }
-      }
-    }
-  }
-
-  //all tabs
-  li {
-    list-style-type: none;
-    padding: 12px 30px;
-    &:hover {
-      color: #00a1ed;
-    }
-    > ul.child-menu {
-      padding: 15px 0;
-      background-color: white;
-      color: black;
-      font-family: $light;
-      font-size: 14px;
-      display: none;
-      position: absolute;
-      top: 75px;
-      left: 0;
-      width: 260px;
-      z-index: 3;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      &:hover {
-        display: block;
-      }
-    }
-    > a {
-      font-family: inherit;
-      font-size: inherit;
-      color: inherit;
-      &:hover {
-        text-decoration: none;
-        background-color: transparent;
-      }
-    }
-    &:hover {
-      > ul.child-menu {
-        display: block;
-      }
-    }
-  }
-  li.writeUsOnNav button {
-    border: none;
-    outline: none;
-    background-color: #0093d5;
-    border-radius: 7px;
-    padding: 0 30px;
-    height: 30px;
-    font-family: $bold;
-    text-transform: uppercase;
-    font-size: 16px;
-    color: white;
-    &:hover {
-      background-color: #00aaf7;
-    }
-  }
-
-  .searchView {
-    position: absolute;
-    margin-top: -86px;
-    width: 1180px;
-
-    &.active .searchBtn {
-      background-color: red;
-      img {
-        content:url('../images/russiaeasy/close.png') !important;
-      }
-    }
-    .searchBtn {
-      float: right;
-      width: 75px;
-      height: 75px;
-      background-color: #025ea8;
-      display: inline-block;
-      vertical-align: top;
-      border: none;
-      outline: none;
-      img {
-        content:url('../images/russiaeasy/search.png');
-      }
-      &:hover img {
-        opacity: 0.5;
-      }
-    }
-
-    &.active .searchField {
-      display: inline-block !important;
-    }
-    .searchField {
-      display: none;
-      //width: 100%;
-      width: 1100px;
-      margin-top: -2px;
-      vertical-align: top;
-      margin-right: -79px;
-      padding: 0!important;
-      #p_p_id_com_liferay_portal_search_web_portlet_SearchPortlet_ {
-        display: block !important;
-      }
-      .portlet-search {
-        margin-top: 15px;
-        vertical-align: middle;
-        form {
-          margin-left: 20px;
-
-          .input-text-wrapper {
-            width: 100%;
-            input.search-input {
-              height: 46px;
-              border-radius: 25px;
-              padding: 0 22px;
-            }
-          }
-          .field-wrapper {
-            float: right;
-            margin-top: -59px;
-            width: 40px;
-            height: 43px;
-            padding: 4px;
-          }
-        }
-      }
-    }
-  }
-}
-
-#wrapper {
-  background-color: white !important;
-  padding: 0 !important;
-  top: -10px;
-  margin-top: 0 !important;
-  width: $width;
 }
 
 //language portlet
@@ -528,3 +191,101 @@ nav#navigation {
     width: 30px;
   }
 }
+
+//login portlet in wrapper
+#wrapper .portlet-login {
+  margin: 20px 30px !important;
+  .fieldset {
+    max-width: 320px;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  .button-holder {
+    margin: 5px 0 20px 0;
+    outline: none;
+  }
+  .portlet-icon-back {
+    display: none;
+  }
+  form button {
+    outline:none;
+  }
+  .portlet-body .navigation ul li:first-child {
+    display: none;
+  }
+}
+
+#wrapper #portlet_new-password, #wrapper #portlet_password-reminder {
+  padding: 20px 60px 0 60px;
+  h2 {
+    font-size: 20px;
+  }
+  .btn-primary {
+    font-family: "RobotoCondensedBold", sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+.emailQuestionForm {
+  border: 1px solid #025ea8;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+body.russiaeasyBody .registrationButton {
+  padding: 10px;
+  font-family: "RobotoCondensedBold", sans-serif;
+  font-size: 21px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #63b95f;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+}
+
+body.russiaeasyBody .registrationButton:hover {
+  background-color: #4ecf47;
+}
+
+body.russiaeasyBody .registrationButton:active {
+  background-color: #4c9a48;
+}
+
+div#portalMessageContainer.alert-info.alert-warning {
+  display: none;
+}
+
+#wrapper {
+  background-color: white !important;
+  padding: 0 !important;
+  top: 0;
+  margin-top: 0 !important;
+  width: $width;
+}
+
+//content
+.portlet-journal-content:not(.fullSizeContent) {
+  //padding: 0 80px 0 85px !important;
+}
+
+#wrapper .portlet-dropzone .portlet-boundary:not(.fullSizeContent) {
+  margin-left: 85px;
+  margin-right: 320px;
+}
+
+body.russiaeasyBody h3.header-title {
+  font-family: $bold;
+  text-transform: uppercase;
+}
+
+@import "_header";
+
+@import "_navigation";
+
+@import "_privateArea";
+
+@import "_media";
+@import "_writeUs";

@@ -1,0 +1,75 @@
+#questionFormModal .modal-content {
+  padding: 50px;
+  width: 600px;
+  height: 500px;
+  top: 10%;
+  left: 50%;
+  margin-left: -300px;
+  overflow: auto;
+}
+
+#questionFormModal .questionForm .headData {
+  display: block !important;
+}
+
+#questionFormModal .questionForm {
+  text-align: center;
+  width: auto !important;
+}
+
+#questionFormModal button.close {
+  margin-right: -35px;
+  margin-top: -50px;
+  font-size: 48px;
+  outline: none;
+}
+
+#questionFormModal .questionForm .input-text-wrapper {
+  margin-top: 20px;
+}
+
+#questionFormModal .questionForm textarea {
+  max-width: 100%;
+}
+
+#questionFormModal .modal-content .questionForm button.btn {
+  font-family: RobotoCondensedBold;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: white;
+  border: none;
+  outline: none;
+  background-color: #0093d5;
+  padding: 7px 30px;
+  margin-top: 10px;
+}
+
+#questionFormModal .modal-content .questionForm button.btn:hover {
+  background-color: #00aaf7;
+}
+
+#questionFormModal .modal-content .questionForm button.btn:focus {
+  background-color: #007ab1;
+}
+
+#questionFormModal .modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  #questionFormModal {
+    .modal:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: " ";
+      height: 100%;
+      //width: 100%;
+    }
+  }
+}
+
+#questionFormModal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
