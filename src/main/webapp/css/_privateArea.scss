@@ -8,13 +8,13 @@ $widthLow: 320px;
 #privateAreaHeader {
   background-color: #FAFAFA !important;
   width: 1180px;
-  padding: 25px 80px;
+  padding: 25px 60px;
   margin-right: auto;
   margin-left: auto;
 
   > div {
     display: inline-block;
-    width: 250px;
+    width: 320px;
     > div {
       /*height: 125px;*/
       > img {
@@ -24,23 +24,25 @@ $widthLow: 320px;
   }
 
   div.horizontalLogo {
-    width: 300px;
+    //width: 320px;
   }
 
   div.areaSiteLabel {
+    //width: 320px;
     padding-left: 30px;
   }
 
   div.languageSelector {
-    width: 200px;
-    text-align: right;
+    width: 170px;
+    text-align: center;
     padding-right: 10px;
+    vertical-align: super;
   }
 
   div.userArea {
-    text-align: right;
-    padding: 10px 10px;
+    width: 230px;
     > div {
+      margin: 20px 0;
       text-align: left;
       width: 230px;
       background-color: #e6f7ff;
@@ -52,7 +54,6 @@ $widthLow: 320px;
       padding-left: 12px;
       cursor: default;
       outline: 0;
-      margin-left: 25px;
       img {
         margin-top: -4px;
         margin-right: 7px;
@@ -64,12 +65,19 @@ $widthLow: 320px;
     .privateAreaList {
       display: none;
       position: absolute;
-      z-index: 10;
+      z-index: 14;
       width: 230px;
       background-color: white;
-      margin-top: 20px;
+      margin-top: 25px;
       margin-left: -12px;
-      box-shadow: 0 7px 50px rgba(0,0,0,0.4);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      -moz-transition: all 0.1s 0.002s ease;
+      -o-transition: all 0.1s 0.002s ease;
+      -webkit-transition: all 0.1s 0.002s ease;
+      transition: all 0.1s 0.002s ease;
+      &:hover {
+        display: block !important;
+      }
       #registrationNumber {
         text-align: left;
         margin: 20px 20px 0 20px;
@@ -95,16 +103,16 @@ $widthLow: 320px;
           padding-left: 0;
           text-align: left;
           list-style-type: none;
-          margin: 10px 0;
+          margin: 15px 0;
           &.selected {
             > a {
               border-left: 5px solid #0093d5;
-              padding-left: 29px;
+              padding: 4px 10px 4px 25px;
               color: #0093d5;
             }
           }
           > a {
-            padding-left: 35px;
+            padding-left: 30px;
             font-family: $bold;
             text-transform: uppercase;
             color: #102a36;
@@ -174,4 +182,7 @@ $widthLow: 320px;
       }
     }
   }
+}
+body.private-area section.privateAreaHeader #privateAreaList {
+  display: block;
 }

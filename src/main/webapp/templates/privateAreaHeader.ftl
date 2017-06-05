@@ -28,7 +28,8 @@
                     </a>
                 </div>
             </div>
-            <div class="privateAreaList" id="privateAreaList">
+
+            <div class="privateAreaList " id="privateAreaList">
                 <div id="registrationNumber"></div>
             <#list nav_items as nav_item>
                 <#assign nav_item_layout = nav_item.getLayout()/>

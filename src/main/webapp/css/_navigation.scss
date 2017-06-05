@@ -30,6 +30,10 @@ nav#navigation {
         font-family: $bold;
         text-transform: uppercase;
         font-size: 18px;
+        -moz-transition: all 0.1s 0.002s ease;
+        -o-transition: all 0.1s 0.002s ease;
+        -webkit-transition: all 0.1s 0.002s ease;
+        transition: all 0.1s 0.002s ease;
       }
       &:hover .delete-tab {
         opacity: 1;
@@ -121,12 +125,13 @@ nav#navigation {
     margin-top: -60px;
     margin-right: -60px;
     border: none;
+    border-radius: 0;
     outline: none;
     img {
       content: url('../images/russiaeasy/search.png');
     }
-    &:hover {
-      background-color: #ff3130;
+    &:hover, &:focus:active {
+      background-color: #ff3130 !important;
     }
     &.active {
       background-color: #025ea8 !important;

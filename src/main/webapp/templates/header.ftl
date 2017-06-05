@@ -10,7 +10,7 @@
                     />
     </div>
     <div class="log-in">
-        <a href="/login">
+        <a href="/login#login">
             <img src="/o/liferay7-theme/images/russiaeasy/key.png"/>
         </a>
     </div>
@@ -51,7 +51,7 @@
                         <a href="/c/portal/logout"><@liferay.language key="sign-out" /></a>
                     </#if>
                     <#if !is_signed_in>
-                    <a href="/login"><img src="/o/liferay7-theme/images/russiaeasy/key.png"/>
+                    <a href="/login#login"><img src="/o/liferay7-theme/images/russiaeasy/key.png"/>
                         <@liferay.language key="sign-in" />
                     </a>
                     &nbsp;/&nbsp;
