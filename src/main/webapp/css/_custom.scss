@@ -133,6 +133,9 @@ body.russiaeasyBody {
     padding: 7px !important;
   }
 
+  .input-select-wrapper select[multiple] {
+    height: auto;
+  }
   select {
     height: 40px;
     font-size: 16px;
@@ -334,16 +337,26 @@ body.russiaeasyBody {
 }
 
 //menu
-#ControlMenu {
+body.closed #ControlMenu {
   display: none;
-  width: 180px;
   height: 60px;
   background-color: #18272e;
-  border: 1px solid #18272e;
+  border: none;
   border-radius: 0;;
+  border-right: 4px solid #e42c2b;
+  width: 2px;
+  > .container-fluid-1280 {
+    display: none;
+  }
   ul {
     margin-top: -3px;
     width: auto;
+  }
+  &:hover {
+    width: 190px;
+    > .container-fluid-1280 {
+      display: block;
+    }
   }
 }
 
