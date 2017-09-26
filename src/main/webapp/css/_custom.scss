@@ -70,15 +70,27 @@ body.russiaeasyBody {
   }
   h4 {
     font-family: $bold;
-    font-size: 21px;
+    font-size: 22px;
     line-height: 32px;
     color: #102a36;
+    margin-top: 7px;
+    margin-bottom: 7px;
   }
   h5 {
-    font-family: $light;
-    font-size: 16px;
+    font-family: $bold;
+    font-size: 18px;
     line-height: 24px;
     color: #102a36;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  h6 {
+    font-family: $bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #102a36;
+    margin-top: 5px;
+    margin-bottom: 3px;
   }
   p {
     color: #102a36;

@@ -20,6 +20,7 @@
     <meta name="apple-mobile-web-app-title" content="RussiaEasy">
     <meta name="application-name" content="RussiaEasy">
     <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="FWcCpZjjH5NwFOeNgcP-yQVOSXKmvD2sf6yU6pdJs1w"/>
 
 <@liferay_util["include"] page=top_head_include />
 
