@@ -48,7 +48,13 @@
     </#if>
 </#list>
 
-<body class="${css_class} ${privateAreaCSS} russiaeasyBody">
+<#assign usrRoles = user.getRoles()>
+<#assign usrRolesStr = "">
+<#list usrRoles as usrRole>
+    <#assign usrRolesStr = usrRolesStr + " role-" + usrRole.getName() />
+</#list>
+
+<body class="${css_class} ${privateAreaCSS} ${usrRolesStr?lower_case} russiaeasyBody">
 
 <@liferay_ui["quick-access"] contentId="#main-content" />
 
@@ -95,7 +101,7 @@
                     <li class="${nav_css_class}">
                         <a aria-labelledby="layout_${nav_item.getLayoutId()}"
                            href="${nav_item.getURL()}"
-                        >
+                                >
                         ${nav_item.getName()}
                         </a>
 
@@ -119,10 +125,10 @@
 
                                     <li class="${nav_child_css_class}"
                                         id="layout_${nav_child.getLayoutId()}"
-                                    >
+                                            >
                                         <a aria-labelledby="layout_${nav_child.getLayoutId()}"
                                            href="${nav_child.getURL()}"
-                                        >
+                                                >
                                         ${nav_child.getName()}
                                         </a>
 
@@ -141,10 +147,10 @@
 
                                                     <li class="${nav_child_two_css_class}"
                                                         id="layout_${nav_child_two.getLayoutId()}"
-                                                    >
+                                                            >
                                                         <a aria-labelledby="layout_${nav_child_two.getLayoutId()}"
                                                            href="${nav_child_two.getURL()}"
-                                                        >
+                                                                >
                                                             &mdash;&nbsp;${nav_child_two.getName()}
                                                         </a>
                                                     </li>
