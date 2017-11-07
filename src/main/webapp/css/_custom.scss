@@ -217,10 +217,23 @@ body.russiaeasyBody {
     background-color: #f7f7f7;
   }
 
+  .lfr-search-container-wrapper.table-simple table {
+    border: 1px solid #ddd;
+    border-collapse: separate;
+  }
+
   .lfr-search-container-wrapper {
 
-    .taglib-search-iterator-page-iterator-top {
+    .taglib-search-iterator-page-iterator-top .lfr-pagination-config,
+    .taglib-search-iterator-page-iterator-top .lfr-pagination-buttons {
       display: none;
+    }
+
+    .taglib-search-iterator-page-iterator-top .lfr-pagination small.search-results{
+      margin-top: -20px;
+    }
+    .taglib-search-iterator-page-iterator-bottom .lfr-pagination small.search-results{
+      margin-top: -32px;
     }
     table {
       border: none;
