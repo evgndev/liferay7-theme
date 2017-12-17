@@ -33,10 +33,14 @@
         define.amd = define._amd;
     </script>
 
+
 <#--<script src="/o/liferay7-theme/js/slick.js"></script>-->
     <script src="/o/liferay7-theme/js/theme.js"></script>
     <link rel="stylesheet" type="text/css" href="/o/liferay7-theme/css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/o/liferay7-theme/css/slick-theme.css"/>
+
+    <#include "${full_templates_path}/pixel.ftl" />
+
 </head>
 
 <#assign privateAreaCSS = ""/>
