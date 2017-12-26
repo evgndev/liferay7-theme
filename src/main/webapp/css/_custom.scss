@@ -141,6 +141,10 @@ body.russiaeasyBody {
     }
   }
 
+  #portlet_verify-email-address {
+    padding: 0 25px;
+  }
+
   input[type="file"] {
     padding: 0 !important;
     box-sizing: content-box;
@@ -230,7 +234,8 @@ body.russiaeasyBody {
   }
 
   .lfr-search-container-wrapper.fullSizeTable {
-    width: 1030px;
+    width: 1130px;
+    margin-left: -60px;
     table {
       border: 1px solid #ddd;
       tr {
