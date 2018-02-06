@@ -35,7 +35,7 @@
 
 
 <#--<script src="/o/liferay7-theme/js/slick.js"></script>-->
-    <script src="/o/liferay7-theme/js/theme.js"></script>
+    <script src="/o/liferay7-theme/js/theme.js?v=9"></script>
     <link rel="stylesheet" type="text/css" href="/o/liferay7-theme/css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/o/liferay7-theme/css/slick-theme.css"/>
 
@@ -66,11 +66,11 @@
 
 <@liferay.control_menu />
 
-<#if !is_signed_in>
-    <#include "${full_templates_path}/header.ftl" />
-</#if>
 <#if has_navigation && is_setup_complete>
     <#include "${full_templates_path}/navigation.ftl" />
+</#if>
+<#if !is_signed_in>
+    <#include "${full_templates_path}/header.ftl" />
 </#if>
 <#if is_signed_in>
     <#include "${full_templates_path}/privateAreaHeader.ftl" />

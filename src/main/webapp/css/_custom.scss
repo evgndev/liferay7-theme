@@ -42,6 +42,10 @@ $width: 1180px;
 $widthMiddle: 768px;
 $widthLow: 320px;
 
+.bold {
+  font-family: $bold;
+}
+
 body.russiaeasyBody {
   font-family: $light;
   background-color: #f6f6f6;
@@ -64,7 +68,7 @@ body.russiaeasyBody {
   }
   h3 {
     font-family: $bold;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 46px;
     color: #102a36;
   }
@@ -642,6 +646,10 @@ body.russiaeasyBody h3.header-title {
       }
     }
   }
+}
+
+.portlet-boundary > section.portlet {
+  margin: 0 !important;
 }
 
 @import "_header";

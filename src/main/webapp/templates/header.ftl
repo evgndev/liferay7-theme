@@ -19,17 +19,6 @@
     <div class="container">
         <div class="withLogo">
             <div class="logoLeft">
-                <div class="writeUs">
-                    <#--<button class="writeUsBtn" data-target="#questionFormModal" data-toggle="modal">-->
-                    <button class="writeUsBtn" onclick="showQuestionFormModal();">
-                    <@liferay.language key="theme.writeUsButton" />
-                    </button>
-                    <div class="writeUsText">
-                        <p>
-                            ← <@liferay.language key="theme.header.writeUsHint" />
-                        </p>
-                    </div>
-                </div>
             </div>
             <div class="logo">
                 <a class="${logo_css_class}" href="${site_default_url}"
@@ -38,28 +27,6 @@
                 </a>
             </div>
             <div class="logoRight">
-                <div class="lang">
-                <@liferay_portlet["runtime"]
-                        defaultPreferences=default_preferences
-                        portletProviderAction=portletProviderAction.VIEW
-                        portletProviderClassName="com.liferay.portal.kernel.servlet.taglib.ui.LanguageEntry"
-                />
-                </div>
-                <div class="privateArea">
-
-                    <#if is_signed_in>
-                        <a href="/c/portal/logout"><@liferay.language key="sign-out" /></a>
-                    </#if>
-                    <#if !is_signed_in>
-                    <a href="/login#login"><img src="/o/liferay7-theme/images/russiaeasy/key.png"/>
-                        <@liferay.language key="sign-in" />
-                    </a>
-                    &nbsp;/&nbsp;
-                    <a href="/registration#registration">
-                        <@liferay.language key="sign-up" />
-                    </a>
-                    </#if>
-                </div>
             </div>
         </div>
         <div class="education">
