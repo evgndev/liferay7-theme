@@ -48,7 +48,9 @@ $widthLow: 320px;
 
 body.russiaeasyBody {
   font-family: $light;
-  background-color: #f6f6f6;
+  &.signed-out {
+    background-color: #f6f6f6;
+  }
   font-size: 14px;
   line-height: 24px;
   color: #102a36;
@@ -103,6 +105,36 @@ body.russiaeasyBody {
   label {
     font-family: $bold;
     font-size: 16px;
+  }
+
+  .capitalized {
+    text-transform: capitalize !important;
+  }
+  .noTransform {
+    text-transform: none !important;
+  }
+
+  .tooltip {
+    max-width: 500px;
+    font-family: $light;
+    font-size: 14px;
+    &.in {
+      opacity: 1 !important;
+    }
+    .tooltip-inner {
+      max-width: none !important;
+      color: #102a36;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      -moz-transition: all 0.1s 0.002s ease;
+      -o-transition: all 0.1s 0.002s ease;
+      -webkit-transition: all 0.1s 0.002s ease;
+      transition: all 0.1s 0.002s ease;
+    }
+    .tooltip-arrow {
+      border-bottom-color: white;
+    }
   }
 
   .btn {
@@ -439,6 +471,14 @@ h2.portlet-title-editable {
   height: auto !important;
 }
 
+// (?) icon
+.lexicon-icon-question-circle-full {
+  color: #decc87 !important;
+  &:hover {
+    color: burlywood !important;;
+  }
+}
+
 //language portlet
 .lang {
   font-family: $light;
@@ -552,7 +592,7 @@ div#portalMessageContainer.alert-info.alert-warning {
 }
 
 #wrapper .portlet-dropzone .portlet-boundary:not(.fullSizeContent) {
-  margin-left: 85px;
+  //margin-left: 85px;
   margin-right: 350px;
 }
 
@@ -656,7 +696,8 @@ body.russiaeasyBody h3.header-title {
 
 @import "_navigation";
 
-@import "_privateArea";
+//@import "_privateArea";
+@import "_rightBlock";
 
 @import "_media";
 @import "_writeUs";

@@ -73,7 +73,7 @@
     <#include "${full_templates_path}/header.ftl" />
 </#if>
 <#if is_signed_in>
-    <#include "${full_templates_path}/privateAreaHeader.ftl" />
+    <#include "${full_templates_path}/rightBlock.ftl" />
 </#if>
 <div class="container-fluid" id="wrapper">
     <div class="navigationPanelWrapper">

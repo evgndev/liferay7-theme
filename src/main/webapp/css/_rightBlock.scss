@@ -1,0 +1,180 @@
+$bold: "RobotoCondensedBold", sans-serif;
+$light: "RobotoLight", sans-serif;
+$italic: "RobotoItalic", sans-serif;
+$width: 1180px;
+$widthMiddle: 768px;
+$widthLow: 320px;
+$rightBlockWidth: 240px;
+
+#rightBlockContainer {
+  width: $width;
+  margin-left: auto;
+  margin-right: auto;
+  #rightBlock {
+    width: $rightBlockWidth;
+    position: absolute;
+    margin-left: $width - $rightBlockWidth;
+    z-index: 10;
+    .horizontalLogo {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .userArea {
+      height: 72px;
+      background-color: #f6f6f6;
+      .userName {
+        display: inline-block;
+        width: 160px;
+        padding: 10px 2px 2px 20px;
+        font-size: 18px;
+        #registrationNumber {
+          text-align: left;
+          margin: 20px 20px 0 20px;
+          padding: 10px 15px;
+          background-color: #fffeeb;
+          border: 1px solid #fbecd8;
+          border-radius: 7px;
+          display: none;
+        }
+      }
+      .userNotifications {
+        width: 60px;
+        display: inline-block;
+        color: #1f2e38;
+        font-size: 20px;
+        font-family: $bold;
+        vertical-align: top;
+        padding-top: 20px;
+        &.active {
+          color: #63b95f;
+        }
+        .notificationIcon {
+          display: inline-block;
+        }
+        .notificationCount {
+          display: inline-block;
+        }
+      }
+    }
+    .rightBlockMenu {
+      background-color: white;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      -moz-transition: all 0.1s 0.002s ease;
+      -o-transition: all 0.1s 0.002s ease;
+      -webkit-transition: all 0.1s 0.002s ease;
+      transition: all 0.1s 0.002s ease;
+      .logoutLink {
+        text-align: left;
+        padding: 15px 45px 20px 25px;
+        hr {
+          margin: 15px 35px;
+        }
+        a {
+          color: #025ea8;
+          text-decoration: underline;
+          &:hover {
+            color: #0093d5;
+            img {
+              opacity: 0.8;
+            }
+          }
+          img {
+            float: right;
+            margin-top: 5px;
+            opacity: 1;
+          }
+        }
+      }
+      .privateAreaList {
+        > ul {
+          padding-top: 20px;
+          padding-left: 0;
+          > li {
+            padding-left: 0;
+            text-align: left;
+            list-style-type: none;
+            margin: 15px 0;
+            &.selected {
+              > a {
+                border-left: 5px solid #0093d5;
+                padding: 4px 10px 4px 25px;
+                color: #0093d5;
+              }
+            }
+            > a {
+              padding-left: 30px;
+              font-family: $bold;
+              text-transform: uppercase;
+              color: #102a36;
+              text-decoration: none;
+              &:hover {
+                color: #00a1ed;
+              }
+            }
+            > ul {
+              display: none;
+              padding-left: 0;
+              > li {
+                border-left: none;
+                padding-left: 35px;
+                text-align: left;
+                list-style-type: none;
+                margin: 10px 0;
+                &.selected {
+                  border-left: none;
+                  a {
+                    color: #0093d5;
+                  }
+                }
+                a {
+                  font-family: $light;
+                  text-transform: none;
+                  padding-left: 0;
+                  color: #102a36;
+                  text-decoration: none;
+                  &:hover {
+                    color: #00a1ed;
+                  }
+                }
+              }
+            }
+            &.selected ul {
+              display: block;
+            }
+            &:hover ul {
+              display: block;
+            }
+          }
+        }
+        > hr {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .logoutLink {
+          text-align: left;
+          padding-left: 35px;
+          padding-right: 45px;
+          padding-bottom: 20px;
+          hr {
+            margin: 15px 35px;
+          }
+          a {
+            color: #025ea8;
+            text-decoration: underline;
+            &:hover {
+              color: #0093d5;
+              img {
+                opacity: 0.8;
+              }
+            }
+            img {
+              float: right;
+              margin-top: 5px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

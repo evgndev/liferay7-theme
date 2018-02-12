@@ -62,10 +62,14 @@
         <div class="rightNavBlock">
             <span class="account">
                 <#if is_signed_in>
-                    <a href="/c/portal/logout"><@liferay.language key="sign-out" /></a>
+                    <a href="/c/portal/logout">
+                        <img src="/o/liferay7-theme/images/russiaeasy/logout.png" alt="">
+                        <@liferay.language key="sign-out" />
+                    </a>
                 </#if>
                 <#if !is_signed_in>
-                    <a href="/login#login"><img src="/o/liferay7-theme/images/russiaeasy/key.png"/>
+                    <a href="/login#login">
+                        <img src="/o/liferay7-theme/images/russiaeasy/key.png"/>
                         <@liferay.language key="sign-in" />
                     </a>
                     &nbsp;/&nbsp;

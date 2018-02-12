@@ -28,6 +28,9 @@ $widthLow: 320px;
         color: white;
         border: none;
         position: relative;
+        .delete-tab {
+          display: none;
+        }
         .lexicon-icon-bars {
           display: none;
         }
@@ -191,7 +194,7 @@ $widthLow: 320px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
         //arrow
-        //position: relative;
+        // see http://www.cssarrowplease.com/
         border: 1px solid #ffffff;
         &:after, &:before {
           bottom: 100%;
@@ -247,17 +250,16 @@ $widthLow: 320px;
 
     .searchView {
       position: absolute;
-      margin-top: -60px;
+      margin-left: -1060px;
 
       &.active .searchField {
         display: inline-block !important;
       }
       .searchField {
         display: none;
-        width: 1120px;
+        width: 1050px;
         margin-top: 10px;
         vertical-align: top;
-        margin-right: -79px;
         padding: 0 !important;
         #p_p_id_com_liferay_portal_search_web_portlet_SearchPortlet_ {
           display: block !important;
