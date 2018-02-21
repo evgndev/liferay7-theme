@@ -14,7 +14,7 @@
             <div class="userNotifications">
                 <div class="notificationIcon">
                     <a href="/messaging">
-                        <img src="/o/liferay7-theme/images/russiaeasy/messageDark.png" alt=">">
+                        <img src="/o/liferay7-theme/images/russiaeasy/messageDark.png" alt="msg" title="Messages"/>
                     </a>
                 </div>
                 <div class="notificationCount hidden">
@@ -85,13 +85,11 @@
                         </#if>
                     </#if>
                 </#list>
+                <hr>
             </div>
-
-            <div class="paidServices">
-
+            <div id="paidServicesBannerWrapper">
             </div>
           <#if is_signed_in>
-            <hr>
             <div class="logoutLink">
                 <a href="/c/portal/logout">
                     <@liferay.language key="sign-out" />

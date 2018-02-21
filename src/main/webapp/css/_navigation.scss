@@ -2,7 +2,7 @@ $bold: "RobotoCondensedBold", sans-serif;
 $light: "RobotoLight", sans-serif;
 $italic: "RobotoItalic", sans-serif;
 $width: 1180px;
-$widthMiddle: 768px;
+$widthMiddle: 780px;
 $widthLow: 320px;
 
 .navigationLine {
@@ -14,11 +14,12 @@ $widthLow: 320px;
     width: $width;
     margin-right: auto;
     margin-left: auto;
+    padding: 0 100px;
     background-color: #025ea8;
     //main tab
     > ul {
       display: inline-block;
-      padding-left: 12px;
+      padding-left: 0;
       margin-bottom: 0;
       > li {
         height: 60px;

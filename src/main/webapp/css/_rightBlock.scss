@@ -2,8 +2,9 @@ $bold: "RobotoCondensedBold", sans-serif;
 $light: "RobotoLight", sans-serif;
 $italic: "RobotoItalic", sans-serif;
 $width: 1180px;
-$widthMiddle: 768px;
+$widthMiddle: 780px;
 $widthLow: 320px;
+$width-spacer: 100px;
 $rightBlockWidth: 240px;
 
 #rightBlockContainer {
@@ -13,27 +14,21 @@ $rightBlockWidth: 240px;
   #rightBlock {
     width: $rightBlockWidth;
     position: absolute;
-    margin-left: $width - $rightBlockWidth;
-    z-index: 10;
+    margin-left: $width - $rightBlockWidth - $width-spacer;
+    z-index: 11;
     .horizontalLogo {
       margin-top: 20px;
       margin-bottom: 10px;
     }
     .userArea {
-      height: 72px;
+      //height: 72px;
       background-color: #f6f6f6;
       .userName {
         display: inline-block;
         width: 160px;
-        padding: 10px 2px 2px 20px;
-        font-size: 18px;
+        padding: 10px 2px 10px 20px;
+        font-size: 16px;
         #registrationNumber {
-          text-align: left;
-          margin: 20px 20px 0 20px;
-          padding: 10px 15px;
-          background-color: #fffeeb;
-          border: 1px solid #fbecd8;
-          border-radius: 7px;
           display: none;
         }
       }
@@ -45,14 +40,26 @@ $rightBlockWidth: 240px;
         font-family: $bold;
         vertical-align: top;
         padding-top: 20px;
-        &.active {
-          color: #63b95f;
-        }
+
         .notificationIcon {
           display: inline-block;
+          img {
+            /* content: url("/o/liferay7-theme/images/russiaeasy/messageDark.png"); */
+          }
+          &:hover {
+            img {
+              content: url("/o/liferay7-theme/images/russiaeasy/messageBlue.png");
+            }
+          }
         }
         .notificationCount {
           display: inline-block;
+        }
+        &.active {
+          color: #63b95f;
+          .notificationIcon img {
+            content: url("/o/liferay7-theme/images/russiaeasy/messageGreen.png");
+          }
         }
       }
     }
@@ -65,7 +72,7 @@ $rightBlockWidth: 240px;
       transition: all 0.1s 0.002s ease;
       .logoutLink {
         text-align: left;
-        padding: 15px 45px 20px 25px;
+        padding: 15px 45px 20px 30px;
         hr {
           margin: 15px 35px;
         }
@@ -146,10 +153,11 @@ $rightBlockWidth: 240px;
             }
           }
         }
-        > hr {
-          margin-top: 0;
-          margin-bottom: 0;
+
+        #paidServicesBannerWrapper {
+          //display: none;
         }
+
         .logoutLink {
           text-align: left;
           padding-left: 35px;
@@ -173,6 +181,10 @@ $rightBlockWidth: 240px;
               opacity: 1;
             }
           }
+        }
+        hr {
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
         }
       }
     }

@@ -38,9 +38,10 @@
 $bold: "RobotoCondensedBold", sans-serif;
 $light: "RobotoLight", sans-serif;
 $italic: "RobotoItalic", sans-serif;
-$width: 1180px;
-$widthMiddle: 768px;
+$width: 1180px; //1080
+$widthMiddle: 780px; //680
 $widthLow: 320px;
+$width-spacer: 100px;
 
 .bold {
   font-family: $bold;
@@ -300,7 +301,7 @@ body.russiaeasyBody {
       margin-top: -20px;
     }
     .taglib-search-iterator-page-iterator-bottom .lfr-pagination small.search-results {
-      margin-top: -32px;
+      margin-top: -40px;
     }
     table {
       border: none;
@@ -316,6 +317,9 @@ body.russiaeasyBody {
     }
 
     .lfr-pagination {
+      .btn {
+        padding: 8px 10px !important;
+      }
       .lfr-pagination-config {
         text-align: left;
         .open > .btn-default.dropdown-toggle {
@@ -592,8 +596,12 @@ div#portalMessageContainer.alert-info.alert-warning {
 }
 
 #wrapper .portlet-dropzone .portlet-boundary:not(.fullSizeContent) {
-  //margin-left: 85px;
-  margin-right: 350px;
+  margin-left: 100px;
+  margin-right: 400px;
+}
+
+#portlet_new-password {
+  max-width: 800px;
 }
 
 //portlet
