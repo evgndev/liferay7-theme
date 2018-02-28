@@ -1,3 +1,6 @@
+<div class="navigationLineTopPlaceholder" style="height: 60px">
+    <#-- navigation line -->
+</div>
 <div class="navigationLine">
     <nav class="${nav_css_class}" id="navigation" role="navigation">
         <h1 class="hide-accessible"><@liferay.language key="navigation" /></h1>
@@ -61,12 +64,12 @@
 
         <div class="rightNavBlock">
             <span class="account">
-                <#if is_signed_in>
-                    <a href="/c/portal/logout">
-                        <img src="/o/liferay7-theme/images/russiaeasy/logout.png" alt="">
-                        <@liferay.language key="sign-out" />
-                    </a>
-                </#if>
+                <#--<#if is_signed_in>-->
+                    <#--<a href="/c/portal/logout">-->
+                        <#--<img src="/o/liferay7-theme/images/russiaeasy/logout.png" alt="">-->
+                        <#--<@liferay.language key="sign-out" />-->
+                    <#--</a>-->
+                <#--</#if>-->
                 <#if !is_signed_in>
                     <a href="/login#login">
                         <img src="/o/liferay7-theme/images/russiaeasy/key.png"/>

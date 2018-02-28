@@ -6,8 +6,11 @@ $widthMiddle: 780px;
 $widthLow: 320px;
 
 .navigationLine {
-  background-color: #025ea8;
   width: 100%;
+  position: fixed;
+  top:0;
+  z-index: 50;
+  background-color: #025ea8;
   nav#navigation {
     text-align: left;
     //padding-right: 60px;
@@ -129,7 +132,8 @@ $widthLow: 320px;
       padding: 0 12px;
       a {
         font-size: 13px;
-        color: #ffffff70;
+        color: #fffc;
+        cursor: pointer;
         &:hover {
           color: #0093d5;
         }
