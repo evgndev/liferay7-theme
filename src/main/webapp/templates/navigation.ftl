@@ -1,11 +1,15 @@
-<div class="navigationLineTopPlaceholder" style="height: 60px">
+<div class="navigationLineTopPlaceholder">
     <#-- navigation line -->
 </div>
 <div class="navigationLine">
     <nav class="${nav_css_class}" id="navigation" role="navigation">
         <h1 class="hide-accessible"><@liferay.language key="navigation" /></h1>
 
-        <ul aria-label="<@liferay.language key="site-pages" />" role="menubar">
+        <div class="hamburger">
+            <a class="dot collapsed" data-toggle="collapse" href="#navigationList" title="">&#9776;</a>
+        </div>
+
+        <ul aria-label="<@liferay.language key="site-pages" />" role="menubar" id="navigationList">
             <#list nav_items as nav_item>
                 <#assign
                 nav_item_attr_has_popup = ""

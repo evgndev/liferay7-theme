@@ -21,7 +21,7 @@
         <div>
             <div>
                 <img alt="logo" src="/o/liferay7-theme/images/russiaeasy/user.png"/>
-            ${user.firstName}&nbsp;${user.lastName}
+                ${user.firstName}&nbsp;${user.lastName}
                 <div class="logoutLink pull-right">
                     <a href="/c/portal/logout">
                         <img src="/o/liferay7-theme/images/russiaeasy/logout.png" alt=">">

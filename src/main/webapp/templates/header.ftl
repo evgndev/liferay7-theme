@@ -1,20 +1,3 @@
-<div class="shortLogo">
-    <div class="horizontalLogo">
-        <a href="/"><img src="/o/liferay7-theme/images/russiaeasy/horizontalLogo.png"></a>
-    </div>
-    <div class="lang">
-        <@liferay_portlet["runtime"]
-                            defaultPreferences=default_preferences
-        portletProviderAction=portletProviderAction.VIEW
-        portletProviderClassName="com.liferay.portal.kernel.servlet.taglib.ui.LanguageEntry"
-                    />
-    </div>
-    <div class="log-in">
-        <a href="/login#login">
-            <img src="/o/liferay7-theme/images/russiaeasy/key.png"/>
-        </a>
-    </div>
-</div>
 <div class="header">
     <div class="container">
         <div class="withLogo">
@@ -31,7 +14,7 @@
         </div>
         <div class="education">
             <div class="educationHeader">
-                <h1>
+                <h1 class="text-uppercase">
                     <@liferay.language key="theme.header.mainText.part1" />
                     <br>
                     <@liferay.language key="theme.header.mainText.part2" />

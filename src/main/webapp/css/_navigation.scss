@@ -5,19 +5,28 @@ $width: 1180px;
 $widthMiddle: 780px;
 $widthLow: 320px;
 
+.navigationLineTopPlaceholder {
+  height: 60px;
+}
+
 .navigationLine {
   width: 100%;
   position: fixed;
   top:0;
   z-index: 50;
   background-color: #025ea8;
+
+  .hamburger {
+    display: none;
+  }
+
   nav#navigation {
     text-align: left;
     //padding-right: 60px;
     width: $width;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 100px;
+    padding: 0 50px;
     background-color: #025ea8;
     //main tab
     > ul {
@@ -41,7 +50,7 @@ $widthLow: 320px;
         > a {
           font-family: $bold;
           text-transform: uppercase;
-          font-size: 17px;
+          font-size: 16px;
           -moz-transition: all 0.1s 0.002s ease;
           -o-transition: all 0.1s 0.002s ease;
           -webkit-transition: all 0.1s 0.002s ease;

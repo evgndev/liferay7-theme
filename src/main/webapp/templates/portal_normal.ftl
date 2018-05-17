@@ -21,6 +21,7 @@
     <meta name="application-name" content="RussiaEasy">
     <meta name="theme-color" content="#ffffff">
     <meta name="google-site-verification" content="FWcCpZjjH5NwFOeNgcP-yQVOSXKmvD2sf6yU6pdJs1w"/>
+    <meta name="viewport" content="width=device-width, user-scalable=true" />
 
 <@liferay_util["include"] page=top_head_include />
 
@@ -67,6 +68,10 @@
 <@liferay.control_menu />
 
 <#if has_navigation && is_setup_complete>
+    <#include "${full_templates_path}/mobileTopBar.ftl" />
+</#if>
+
+<#if has_navigation && is_setup_complete>
     <#include "${full_templates_path}/navigation.ftl" />
 </#if>
 <#if !is_signed_in>
@@ -75,6 +80,7 @@
 <#if is_signed_in>
     <#include "${full_templates_path}/rightBlock.ftl" />
 </#if>
+
 <div class="container-fluid" id="wrapper">
     <div class="navigationPanelWrapper">
         <div class="navigationPanel">
@@ -105,8 +111,8 @@
                     <li class="${nav_css_class}">
                         <a aria-labelledby="layout_${nav_item.getLayoutId()}"
                            href="${nav_item.getURL()}"
-                                >
-                        ${nav_item.getName()}
+                        >
+                            ${nav_item.getName()}
                         </a>
 
                         <#if nav_item.hasChildren()>
@@ -129,11 +135,11 @@
 
                                     <li class="${nav_child_css_class}"
                                         id="layout_${nav_child.getLayoutId()}"
-                                            >
+                                    >
                                         <a aria-labelledby="layout_${nav_child.getLayoutId()}"
                                            href="${nav_child.getURL()}"
-                                                >
-                                        ${nav_child.getName()}
+                                        >
+                                            ${nav_child.getName()}
                                         </a>
 
                                         <#if nav_child.hasChildren()>
@@ -151,10 +157,10 @@
 
                                                     <li class="${nav_child_two_css_class}"
                                                         id="layout_${nav_child_two.getLayoutId()}"
-                                                            >
+                                                    >
                                                         <a aria-labelledby="layout_${nav_child_two.getLayoutId()}"
                                                            href="${nav_child_two.getURL()}"
-                                                                >
+                                                        >
                                                             &mdash;&nbsp;${nav_child_two.getName()}
                                                         </a>
                                                     </li>
@@ -178,9 +184,9 @@
     <#if selectable>
         <@liferay_util["include"] page=content_include />
     <#else>
-    ${portletDisplay.recycle()}
+        ${portletDisplay.recycle()}
 
-    ${portletDisplay.setTitle(the_title)}
+        ${portletDisplay.setTitle(the_title)}
 
         <@liferay_theme["wrap-portlet"] page="portlet.ftl">
             <@liferay_util["include"] page=content_include />

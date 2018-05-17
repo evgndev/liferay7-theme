@@ -45,7 +45,7 @@
                                         </#list>
                                     </#if>
 
-                                    <li class="${nav_child_css_class}"
+                                    <li class="${nav_child.getLayout().getFriendlyURL()?substring(1)} ${nav_child_css_class}"
                                         id="layout_${nav_child.getLayoutId()}"
                                     >
                                         <a aria-labelledby="layout_${nav_child.getLayoutId()}"
