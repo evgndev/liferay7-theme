@@ -47,9 +47,7 @@
 <#assign privateAreaCSS = ""/>
 <#list nav_items as nav_item>
     <#if nav_item.isSelected()>
-        <#assign
-        privateAreaCSS = "private-area"
-        />
+        <#assign privateAreaCSS = "private-area"/>
     </#if>
 </#list>
 
@@ -75,7 +73,9 @@
     <#include "${full_templates_path}/navigation.ftl" />
 </#if>
 <#if !is_signed_in>
-    <#include "${full_templates_path}/header.ftl" />
+    <#if !themeDisplay.getURLCurrent()?contains("verify_email_address")>
+        <#include "${full_templates_path}/header.ftl" />
+    </#if>
 </#if>
 <#if is_signed_in>
     <#include "${full_templates_path}/rightBlock.ftl" />

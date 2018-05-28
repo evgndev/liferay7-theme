@@ -59,6 +59,10 @@ body.dialog-with-footer {
 }
 
 body.russiaeasyBody {
+  #portlet_verify-email-address .alert-info {
+    font-size: 18px !important;
+    font-family: "RobotoCondensedBold", sans-serif !important;;
+  }
   font-family: $light;
   &.signed-out {
     background-color: #f6f6f6;
@@ -785,7 +789,7 @@ body.russiaeasyBody h3.header-title {
 }
 
 .ddlWithoutActions .lfr-meta-actions {
-  display:none;
+  display: none;
 }
 
 @import "_header";
