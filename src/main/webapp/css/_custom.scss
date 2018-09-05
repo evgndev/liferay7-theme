@@ -792,6 +792,11 @@ body.russiaeasyBody h3.header-title {
   display: none;
 }
 
+body #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right {
+  bottom: 130px;
+  right: 60px;
+}
+
 @import "_header";
 
 @import "_navigation";

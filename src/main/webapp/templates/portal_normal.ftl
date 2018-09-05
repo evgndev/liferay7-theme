@@ -41,8 +41,9 @@
     <link rel="stylesheet" type="text/css" href="/o/liferay7-theme/css/slick-theme.css"/>
 
     <#include "${full_templates_path}/pixel.ftl" />
+    <#include "${full_templates_path}/oneSignal.ftl" />
 
-</head>
+    </head>
 
 <#assign privateAreaCSS = ""/>
 <#list nav_items as nav_item>
