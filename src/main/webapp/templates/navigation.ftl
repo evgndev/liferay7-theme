@@ -26,6 +26,11 @@
                     />
                 </#if>
 
+                <#assign nav_item_layout = nav_item.getLayout()/>
+                <#if nav_item_layout.getFriendlyURL() == '/enrollee-area' >
+                    <#assign nav_item_css_class = "${nav_item_css_class} enrollee-area"/>
+                </#if>
+
                 <li ${nav_item_attr_selected} class="${nav_item_css_class}" id="layout_${nav_item.getLayoutId()}"
                                               role="presentation">
                     <a aria-labelledby="layout_${nav_item.getLayoutId()}" ${nav_item_attr_has_popup}

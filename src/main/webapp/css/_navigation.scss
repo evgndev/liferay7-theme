@@ -9,6 +9,10 @@ $widthLow: 320px;
   height: 60px;
 }
 
+body:not(.role-enrollee) .navigationLine li.enrollee-area {
+  display: none !important;
+}
+
 .navigationLine {
   width: 100%;
   position: fixed;

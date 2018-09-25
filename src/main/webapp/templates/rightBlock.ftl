@@ -1,7 +1,7 @@
 <div id="rightBlockContainer">
     <div id="rightBlock">
         <div class="horizontalLogo">
-            <a href="/"><img src="/o/liferay7-theme/images/russiaeasy/horizontalLogo240.png"></a>
+            <a href="/home"><img src="/o/liferay7-theme/images/russiaeasy/horizontalLogo240.png"></a>
         </div>
 
         <div class="userArea">

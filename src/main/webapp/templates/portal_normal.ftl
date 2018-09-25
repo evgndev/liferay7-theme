@@ -66,11 +66,13 @@
 
 <@liferay.control_menu />
 
-<#if has_navigation && is_setup_complete>
+<#--<#if has_navigation && is_setup_complete>-->
+<#if has_navigation>
     <#include "${full_templates_path}/mobileTopBar.ftl" />
 </#if>
 
-<#if has_navigation && is_setup_complete>
+<#--<#if has_navigation && is_setup_complete>-->
+<#if has_navigation>
     <#include "${full_templates_path}/navigation.ftl" />
 </#if>
 <#if !is_signed_in>

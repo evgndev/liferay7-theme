@@ -1,5 +1,5 @@
 <#--OneSignal integration code-->
-<link rel="manifest" href="/manifest.json" />
+<link rel="manifest" href="/o/liferay7-theme/oneSignalSDK/manifest.json" />
 <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 <script>
     var OneSignal = window.OneSignal || [];
