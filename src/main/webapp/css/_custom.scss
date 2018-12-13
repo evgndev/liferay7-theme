@@ -784,6 +784,10 @@ body.russiaeasyBody h3.header-title {
   }
 }
 
+.aui label {
+  font-weight: normal;
+}
+
 .portlet-boundary > section.portlet {
   margin: 0 !important;
 }
@@ -795,6 +799,19 @@ body.russiaeasyBody h3.header-title {
 body #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right {
   bottom: 130px;
   right: 60px;
+}
+
+.date {
+  background: url("/o/liferay7-theme/images/russiaeasy/date/date.png") no-repeat;
+  background-position: 95% center;
+}
+.date:hover {
+  background: url("/o/liferay7-theme/images/russiaeasy/date/dateHover.png") no-repeat;
+  background-position: 95% center;
+}
+.date:active {
+  background: url("/o/liferay7-theme/images/russiaeasy/date/dateActive.png") no-repeat;
+  background-position: 95% center;
 }
 
 @import "_header";
