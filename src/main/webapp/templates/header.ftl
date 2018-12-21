@@ -16,7 +16,7 @@
             <div class="educationHeader">
                 <h1 class="text-uppercase">
                     <@liferay.language key="theme.header.mainText.part1" />
-                    <br>
+                        <br>
                     <@liferay.language key="theme.header.mainText.part2" />
                 </h1>
             </div>
@@ -24,26 +24,26 @@
             <div class="educationText">
                 <p>
                     <@liferay.language key="theme.header.mainTextNext.part1" />
-                    <br>
+                        <br>
                     <@liferay.language key="theme.header.mainTextNext.part2" />
                 </p>
             </div>
 
-            <#if !is_signed_in>
-                <button class="registrationButton" onclick="location.href='/registration#registration';">
-                    <@liferay.language key="theme.registrationButton" />
-                </button>
-                <br>
+            <button class="registrationButton" onclick="location.href='#programBanner';">
+                <@liferay.language key="theme.toProgramSelection" />
+            </button>
+            <br>
+            <#if false>
                 <div class="educationWhyReg">
                     <div class="educationWhyRegTextWrapper">
                         <div class="educationWhyRegTextBlock">
                             <p>
                                 <@liferay.language key="theme.header.whyRegistrationHint.1" />
-                                <br>
+                                    <br>
                                 <@liferay.language key="theme.header.whyRegistrationHint.2" />
-                                <br>
+                                    <br>
                                 <@liferay.language key="theme.header.whyRegistrationHint.3" />
-                                <br>
+                                    <br>
                                 <@liferay.language key="theme.header.whyRegistrationHint.4" />
                             </p>
                         </div>
