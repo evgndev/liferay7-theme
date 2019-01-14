@@ -814,6 +814,10 @@ body #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesigna
   background-position: 95% center;
 }
 
+.hidden {
+  display: none;
+}
+
 @import "_header";
 
 @import "_navigation";

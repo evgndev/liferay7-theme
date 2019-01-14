@@ -31,6 +31,12 @@
                     <#assign nav_item_css_class = "${nav_item_css_class} enrollee-area"/>
                 </#if>
 
+                <#if nav_item_layout.getFriendlyURL() == '/privatearea' >
+                    <#if !is_signed_in>
+                        <#assign nav_item_css_class = "${nav_item_css_class} hidden"/>
+                    </#if>
+                </#if>
+
                 <li ${nav_item_attr_selected} class="${nav_item_css_class}" id="layout_${nav_item.getLayoutId()}"
                                               role="presentation">
                     <a aria-labelledby="layout_${nav_item.getLayoutId()}" ${nav_item_attr_has_popup}
@@ -110,7 +116,7 @@
                 <#--${themeDisplay.getLocale().getDisplayLanguage()}  английский-->
                 <#--${themeDisplay.getLocale().getLanguage()} en-->
                 <#--${themeDisplay.getLocale().toLanguageTag()} ru-RU-->
-                <div class="shortLabel">${themeDisplay.getLocale().getISO3Language()}&nbsp;&#x25BC;</div>
+                <div class="shortLabel">${themeDisplay.getLocale().getISO3Country()}&nbsp;&#x25BC;</div>
 
                 <@liferay_portlet["runtime"]
                 defaultPreferences=default_preferences

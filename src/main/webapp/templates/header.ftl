@@ -29,7 +29,7 @@
                 </p>
             </div>
 
-            <button class="registrationButton" onclick="location.href='#programBanner';">
+            <button class="registrationButton" onclick="location.href='/home#programBanner';">
                 <@liferay.language key="theme.toProgramSelection" />
             </button>
             <br>

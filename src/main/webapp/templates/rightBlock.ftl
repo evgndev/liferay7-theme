@@ -7,7 +7,7 @@
         <div class="userArea">
             <div class="userName">
                 ${user.firstName}
-                <br>
+                    <br>
                 ${user.lastName}
                 <div id="registrationNumber"></div>
             </div>
@@ -27,8 +27,9 @@
                 <#list nav_items as nav_item>
                     <#assign nav_item_layout = nav_item.getLayout()/>
                     <#if nav_item_layout.getFriendlyURL() == '/privatearea' >
-                        <#if nav_item.hasChildren()>
-                            <ul aria-label="<@liferay.language key="site-pages" />" role="menubar">
+                        <#if is_signed_in>
+                            <#if nav_item.hasChildren()>
+                                <ul aria-label="<@liferay.language key="site-pages" />" role="menubar">
                                 <#list nav_item.getChildren() as nav_child>
                                     <#assign
                                     nav_child_css_class = ""
@@ -46,42 +47,43 @@
                                     </#if>
 
                                     <li class="${nav_child.getLayout().getFriendlyURL()?substring(1)} ${nav_child_css_class}"
-                                        id="layout_${nav_child.getLayoutId()}"
-                                    >
-                                        <a aria-labelledby="layout_${nav_child.getLayoutId()}"
-                                           href="${nav_child.getURL()}"
+                                id="layout_${nav_child.getLayoutId()}"
+                                >
+                                <a aria-labelledby="layout_${nav_child.getLayoutId()}"
+                                href="${nav_child.getURL()}"
+                                >
+                                    ${nav_child.getName()}
+                                    </a>
+
+                                    <#if nav_child.hasChildren()>
+                                        <ul class="child-menu">
+                                        <#list nav_child.getChildren() as nav_child_two>
+                                            <#assign
+                                            nav_child_two_css_class = ""
+                                            />
+
+                                            <#if nav_child_two.isSelected()>
+                                                <#assign
+                                                nav_child_two_css_class = "selected"
+                                                />
+                                            </#if>
+
+                                            <li class="${nav_child_two_css_class}"
+                                        id="layout_${nav_child_two.getLayoutId()}"
                                         >
-                                            ${nav_child.getName()}
-                                        </a>
-
-                                        <#if nav_child.hasChildren()>
-                                            <ul class="child-menu">
-                                                <#list nav_child.getChildren() as nav_child_two>
-                                                    <#assign
-                                                    nav_child_two_css_class = ""
-                                                    />
-
-                                                    <#if nav_child_two.isSelected()>
-                                                        <#assign
-                                                        nav_child_two_css_class = "selected"
-                                                        />
-                                                    </#if>
-
-                                                    <li class="${nav_child_two_css_class}"
-                                                        id="layout_${nav_child_two.getLayoutId()}"
-                                                    >
-                                                        <a aria-labelledby="layout_${nav_child_two.getLayoutId()}"
-                                                           href="${nav_child_two.getURL()}"
-                                                        >
-                                                            &mdash;&nbsp;${nav_child_two.getName()}
-                                                        </a>
-                                                    </li>
-                                                </#list>
-                                            </ul>
-                                        </#if>
+                                        <a aria-labelledby="layout_${nav_child_two.getLayoutId()}"
+                                        href="${nav_child_two.getURL()}"
+                                        >
+                                        &mdash;&nbsp;${nav_child_two.getName()}
+                                            </a>
+                                            </li>
+                                        </#list>
+                                        </ul>
+                                    </#if>
                                     </li>
                                 </#list>
-                            </ul>
+                                </ul>
+                            </#if>
                         </#if>
                     </#if>
                 </#list>
@@ -89,14 +91,14 @@
             </div>
             <div id="paidServicesBannerWrapper">
             </div>
-          <#if is_signed_in>
-            <div class="logoutLink">
+            <#if is_signed_in>
+                <div class="logoutLink">
                 <a href="/c/portal/logout">
-                    <@liferay.language key="sign-out" />
-                    <img src="/o/liferay7-theme/images/russiaeasy/logout.png" alt=">">
+                <@liferay.language key="sign-out" />
+                <img src="/o/liferay7-theme/images/russiaeasy/logout.png" alt=">">
                 </a>
-            </div>
-          </#if>
+                </div>
+            </#if>
         </div>
     </div>
 </div>
