@@ -818,6 +818,142 @@ body #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesigna
   display: none;
 }
 
+
+.flagIcon {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/flag.png");
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.flagIcon:hover {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/flagHover.png");
+}
+
+.flagIcon:active {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/flagActive.png");
+}
+
+.folderIcon {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/folder.png");
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.folderIcon:hover {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/folderHover.png");
+}
+
+.folderIcon:active {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/folderActive.png");
+}
+
+.excelIcon {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/excel.png");
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.excelIcon:hover {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/excelHover.png");
+}
+
+.excelIcon:active {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/excelActive.png");
+}
+
+.toExcelIcon {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/toExcel.png");
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.toExcelIcon:hover {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/toExcelHover.png");
+}
+
+.toExcelIcon:active {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/toExcelActive.png");
+}
+
+.fromExcelIcon {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/fromExcel.png");
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.fromExcelIcon:hover {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/fromExcelHover.png");
+}
+
+.fromExcelIcon:active {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/fromExcelActive.png");
+}
+
+.questionnaireIcon {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/questionnaire.png");
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.questionnaireIcon:hover {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/questionnaireHover.png");
+}
+
+.questionnaireIcon:active {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/questionnaireActive.png");
+}
+
+.linkIcon {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/link.png");
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.linkIcon:hover {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/linkHover.png");
+}
+
+.linkIcon:active {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/linkActive.png");
+}
+
+.plusIcon {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/plus.png");
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.plusIcon:hover {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/plusHover.png");
+}
+
+.plusIcon:active {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/plusActive.png");
+}
+
+.binIcon {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/bin.png");
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.binIcon:hover {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/binHover.png");
+}
+
+.binIcon:active {
+  background: url("/o/liferay7-theme/images/russiaeasy/bar/binActive.png");
+}
+
 @import "_header";
 
 @import "_navigation";
