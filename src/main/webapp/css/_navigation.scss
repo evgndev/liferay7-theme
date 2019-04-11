@@ -16,7 +16,7 @@ body:not(.role-enrollee) .navigationLine li.enrollee-area {
 .navigationLine {
   width: 100%;
   position: fixed;
-  top:0;
+  top: 0;
   z-index: 50;
   background-color: #025ea8;
 
@@ -37,6 +37,7 @@ body:not(.role-enrollee) .navigationLine li.enrollee-area {
       display: inline-block;
       padding-left: 0;
       margin-bottom: 0;
+
       > li {
         height: 60px;
         display: inline-block;
@@ -45,24 +46,29 @@ body:not(.role-enrollee) .navigationLine li.enrollee-area {
         color: white;
         border: none;
         position: relative;
+
         .delete-tab {
           display: none;
         }
+
         .lexicon-icon-bars {
           display: none;
         }
+
         > a {
           font-family: $bold;
           text-transform: uppercase;
-          font-size: 16px;
+          font-size: 18px;
           -moz-transition: all 0.1s 0.002s ease;
           -o-transition: all 0.1s 0.002s ease;
           -webkit-transition: all 0.1s 0.002s ease;
           transition: all 0.1s 0.002s ease;
         }
+
         &:hover .delete-tab {
           opacity: 1;
         }
+
         .delete-tab {
           color: white;
           right: 20px;
@@ -74,6 +80,7 @@ body:not(.role-enrollee) .navigationLine li.enrollee-area {
           line-height: 20px;
           position: absolute;
           opacity: 0;
+
           &:hover {
             opacity: 0.4;
           }
@@ -85,9 +92,11 @@ body:not(.role-enrollee) .navigationLine li.enrollee-area {
     li {
       list-style-type: none;
       padding: 12px 30px;
+
       &:hover {
         color: #00a1ed;
       }
+
       > ul.child-menu {
         padding: 15px 0;
         background-color: white;
@@ -101,19 +110,23 @@ body:not(.role-enrollee) .navigationLine li.enrollee-area {
         width: 260px;
         z-index: 3;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
         &:hover {
           display: block;
         }
       }
+
       > a {
         font-family: inherit;
         font-size: inherit;
         color: inherit;
+
         &:hover {
           text-decoration: none;
           background-color: transparent;
         }
       }
+
       &:hover {
         > ul.child-menu {
           display: block;
@@ -124,193 +137,232 @@ body:not(.role-enrollee) .navigationLine li.enrollee-area {
     .rightNavBlock {
       display: inline-block;
       float: right;
-    }
 
-    .account {
-      padding: 0 12px;
-      color: white;
-      img {
-        margin: 0 6px 4px 0;
-      }
-      a {
-        font-size: 13px;
-        color: white;
-        &:hover {
-          color: #0093d5;
-        }
-      }
-    }
-
-    .writeUsOnNav {
-      padding: 0 12px;
-      a {
-        font-size: 13px;
-        color: #fffc;
-        cursor: pointer;
-        &:hover {
-          color: #0093d5;
-        }
-      }
-    }
-
-    .languages {
-      text-align: center;
-      padding-top: 7px;
-      vertical-align: bottom;
-      background-color: #1878c5;
-      width: 60px;
-      height: 60px;
-      display: inline-block;
-      &:hover {
-        background-color: #008dff!important;
-      }
-
-      .shortLabel {
-        color: white;
-        text-transform: uppercase;
-        font-family: "RobotoCondensedBold", sans-serif;
-        font-size: 12px;
-        line-height: 16px;
-      }
-
-      //stock block
-      .portlet-topper {
-        display: none;
-      }
-      > div.portlet-language {
+      > div {
         display: inline-block;
-      }
-      .portlet-content {
-        padding: 0;
-      }
-      .portlet-body {
-        > span {
-          display: block;
-        }
-        > a {
-          display: none;
-        }
-      }
-      :hover {
-        .portlet-body > a {
-          //display: block !important;
-        }
+        line-height: 60px;
       }
 
-      .languageDropdown {
-        display: none;
-        background-color: white;
-        width: 130px;
-        position: relative;
-        top: 20px;
-        right: 70px;
-        text-align: left;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-transform: capitalize;
-        z-index: 20;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      .account {
+        padding: 0 12px;
+        color: white;
 
-        //arrow
-        // see http://www.cssarrowplease.com/
-        border: 1px solid #ffffff;
-        &:after, &:before {
-          bottom: 100%;
-          left: 50%;
-          border: solid transparent;
-          content: " ";
-          height: 0;
-          width: 0;
-          position: absolute;
-          pointer-events: none;
-        }
-        &:after {
-          border-color: rgba(255, 255, 255, 0);
-          border-bottom-color: #ffffff;
-          border-width: 12px;
-          margin-left: 22px;
-        }
-        &:before {
-          border-color: rgba(255, 255, 255, 0);
-          border-bottom-color: #ffffff;
-          border-width: 13px;
-          margin-left: 22px;
-        }
-      }
+        a {
+          font-size: 13px;
+          color: white;
+          text-decoration: underline;
 
-    }
+          &:hover, &:active {
+            color: #0093d5;
 
-    #searchBtn {
-      width: 60px;
-      height: 60px;
-      background-color: #0d6bb7;
-      display: inline-block;
-      //margin-top: -60px;
-      border: none;
-      border-radius: 0;
-      outline: none;
-      img {
-        content: url('../images/russiaeasy/search.png');
-      }
-      &:hover, &:focus:active {
-        background-color: #008dff !important;
-      }
-      &.active {
-        background-color: #008dff !important;
-        img {
-          content: url('../images/russiaeasy/close.png') !important;
-        }
-        &:hover img {
-          opacity: 0.5;
-        }
-      }
-    }
+            img {
+              content: url('../images/russiaeasy/navigation/profile_h.png');
+            }
+          }
 
-    .searchView {
-      position: absolute;
-      margin-left: -1060px;
-
-      &.active .searchField {
-        display: inline-block !important;
-      }
-      .searchField {
-        display: none;
-        width: 1050px;
-        margin-top: 10px;
-        vertical-align: top;
-        padding: 0 !important;
-        #p_p_id_com_liferay_portal_search_web_portlet_SearchPortlet_ {
-          display: block !important;
-          div.portlet-content {
-            padding: 0 !important;
-            margin: 0 !important;
+          img {
+            content: url('../images/russiaeasy/navigation/profile.png');
+            margin-right: 5px;
           }
         }
-        .portlet-search {
-          margin-top: 0;
-          vertical-align: middle;
-          form {
-            margin-left: 20px;
+      }
 
-            .input-text-wrapper {
-              width: 100%;
-              input.search-input {
-                height: 38px;
-                border-radius: 25px;
-                padding: 0 22px;
+      .writeUsOnNav {
+        padding: 0 12px;
+
+        a {
+          font-size: 13px;
+          color: #fffc;
+          cursor: pointer;
+
+          &:hover, &:active {
+            color: #0093d5;
+
+            img {
+              content: url('../images/russiaeasy/navigation/mail_h.png');
+            }
+          }
+
+          img {
+            content: url('../images/russiaeasy/navigation/mail.png');
+          }
+        }
+      }
+
+      #searchBtn {
+        width: 60px;
+        height: 60px;
+        //background-color: #0d6bb7;
+        //margin-top: -60px;
+        border: none;
+        border-radius: 0;
+        outline: none;
+
+        img {
+          content: url('../images/russiaeasy/navigation/search.png');
+        }
+
+        &:hover, &:focus:active {
+          img {
+            content: url('../images/russiaeasy/navigation/search_h.png');
+          }
+        }
+
+        &.active {
+          
+          img {
+            content: url('../images/russiaeasy/close.png') !important;
+          }
+
+          &:hover img {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .searchView {
+        position: absolute;
+        margin-left: -1060px;
+
+        &.active .searchField {
+          display: inline-block !important;
+        }
+
+        .searchField {
+          display: none;
+          width: 1050px;
+          margin-top: 10px;
+          vertical-align: top;
+          padding: 0 !important;
+
+          #p_p_id_com_liferay_portal_search_web_portlet_SearchPortlet_ {
+            display: block !important;
+
+            div.portlet-content {
+              padding: 0 !important;
+              margin: 0 !important;
+            }
+          }
+
+          .portlet-search {
+            margin-top: 0;
+            vertical-align: middle;
+
+            form {
+              margin-left: 20px;
+
+              .input-text-wrapper {
+                width: 100%;
+
+                input.search-input {
+                  height: 38px;
+                  border-radius: 25px;
+                  padding: 0 22px;
+                }
+              }
+
+              .field-wrapper {
+                float: right;
+                margin-top: -75px;
+                width: 40px;
+                height: 0;
+                padding: 4px;
+                margin-bottom: 0;
+              }
+
+              .taglib-empty-result-message {
+                border: none;
               }
             }
-            .field-wrapper {
-              float: right;
-              margin-top: -54px;
-              width: 40px;
-              height: 0;
-              padding: 4px;
-              margin-bottom: 0;
-            }
-            .taglib-empty-result-message {
-              border: none;
-            }
+          }
+        }
+      }
+
+      .languages {
+        text-align: center;
+        width: 60px;
+
+        &:hover {
+         // background-color: #008dff !important;
+        }
+
+        .shortLabel {
+          color: white;
+          text-transform: uppercase;
+          font-family: "RobotoCondensedBold", sans-serif;
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+        //stock block
+        .portlet-topper {
+          display: none;
+        }
+
+        > div.portlet-language {
+          display: inline-block;
+        }
+
+        .portlet-content {
+          padding: 0;
+        }
+
+        .portlet-body {
+          > span {
+            display: block;
+          }
+
+          > a {
+            display: none;
+          }
+        }
+
+        :hover {
+          .portlet-body > a {
+            //display: block !important;
+          }
+        }
+
+        .languageDropdown {
+          display: none;
+          background-color: white;
+          width: 130px;
+          position: absolute;
+          margin-left: -70px;
+          text-align: left;
+          padding: 10px 20px;
+          border-radius: 5px;
+          text-transform: capitalize;
+          z-index: 20;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+          //arrow
+          // see http://www.cssarrowplease.com/
+          border: 1px solid #ffffff;
+
+          &:after, &:before {
+            bottom: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+          }
+
+          &:after {
+            border-color: rgba(255, 255, 255, 0);
+            border-bottom-color: #ffffff;
+            border-width: 12px;
+            margin-left: 22px;
+          }
+
+          &:before {
+            border-color: rgba(255, 255, 255, 0);
+            border-bottom-color: #ffffff;
+            border-width: 13px;
+            margin-left: 22px;
           }
         }
       }

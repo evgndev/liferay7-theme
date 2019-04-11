@@ -66,7 +66,7 @@
                                     <a aria-labelledby="layout_${nav_child.getLayoutId()}"
                                        href="${nav_child.getURL()}"
                                        role="menuitem"
-                                        ${nav_child.getTarget()}>
+                                            ${nav_child.getTarget()}>
                                         ${nav_child.getName()}
                                     </a>
                                 </li>
@@ -78,45 +78,43 @@
         </ul>
 
         <div class="rightNavBlock">
-            <span class="account">
+            <div class="account">
                 <#--<#if is_signed_in>-->
-                    <#--<a href="/c/portal/logout">-->
-                        <#--<img src="/o/liferay7-theme/images/russiaeasy/logout.png" alt="">-->
-                        <#--<@liferay.language key="sign-out" />-->
-                    <#--</a>-->
+                <#--<a href="/c/portal/logout">-->
+                <#--<img src="/o/liferay7-theme/images/russiaeasy/logout.png" alt="">-->
+                <#--<@liferay.language key="sign-out" />-->
+                <#--</a>-->
                 <#--</#if>-->
                 <#if !is_signed_in>
                     <a href="/login#login">
-                        <img src="/o/liferay7-theme/images/russiaeasy/key.png"/>
-                        <@liferay.language key="sign-in" />
+                        <img src="/o/liferay7-theme/images/russiaeasy/navigation/profile.png"/>
+                        <@liferay.language key="sign-in"/>
                     </a>
-                    &nbsp;/&nbsp;
+                    <span>&nbsp;/&nbsp;</span>
                     <a href="/registration#registration">
-                        <@liferay.language key="sign-up" />
+                        <@liferay.language key="sign-up"/>
                     </a>
                 </#if>
-            </span>
+            </div>
 
-            <span class="writeUsOnNav">
-                <a onclick="showQuestionFormModal();"><@liferay.language key="theme.writeUsButton" /></a>
-            </span>
+            <div class="writeUsOnNav">
+                <a onclick="showQuestionFormModal();" title="<@liferay.language key="theme.writeUsButton" />">
+                    <img src="/o/liferay7-theme/images/russiaeasy/navigation/mail.png" alt="contact us"/>
+                </a>
+            </div>
 
-            <span class="searchView" id="searchView">
+            <div class="searchView" id="searchView">
                 <div class="searchField">
                     <@liferay.search/>
                 </div>
-            </span>
-            <span class="searching">
-                <button class="searchBtn" id="searchBtn" onClick="theme.toggleSearch()">
-                    <img src="/o/liferay7-theme/images/russiaeasy/search.png" alt="search">
-                </button>
-            </span>
+            </div>
+            <div class="searching">
+                <a class="searchBtn" id="searchBtn" onClick="theme.toggleSearch()">
+                    <img src="/o/liferay7-theme/images/russiaeasy/navigation/search.png" alt="search"/>
+                </a>
+            </div>
             <div class="languages" onclick="theme.showLanguageDropdown()">
-                <#--${themeDisplay.getLanguageId()}-->
-                <#--${themeDisplay.getLocale().getDisplayLanguage()}  английский-->
-                <#--${themeDisplay.getLocale().getLanguage()} en-->
-                <#--${themeDisplay.getLocale().toLanguageTag()} ru-RU-->
-                <div class="shortLabel">${themeDisplay.getLocale().getISO3Country()}&nbsp;&#x25BC;</div>
+<#--                <div class="shortLabel">${themeDisplay.getLocale().getISO3Country()}&nbsp;&#x25BC;</div>-->
 
                 <@liferay_portlet["runtime"]
                 defaultPreferences=default_preferences
@@ -128,6 +126,6 @@
 
                 </div>
             </div>
-        </span>
+        </div>
     </nav>
 </div>

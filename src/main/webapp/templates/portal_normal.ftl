@@ -68,7 +68,7 @@
 
 <#--<#if has_navigation && is_setup_complete>-->
 <#if has_navigation>
-    <#include "${full_templates_path}/mobileTopBar.ftl" />
+<#--    <#include "${full_templates_path}/mobileTopBar.ftl" />-->
 </#if>
 
 <#--<#if has_navigation && is_setup_complete>-->

@@ -1,56 +1,39 @@
 <div class="header">
     <div class="container">
-        <div class="withLogo">
-            <div class="logoLeft">
-            </div>
+        <div class="mainBlock">
             <div class="logo">
-                <a class="${logo_css_class}" href="${site_default_url}"
+                <a class="homeLink" href="${site_default_url}"
                    title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
-                    <img alt="${logo_description}" src="${site_logo}"/>
+                    <img alt="${logo_description}" src="/o/liferay7-theme/images/russiaeasy/header/logo.png"/>
                 </a>
             </div>
-            <div class="logoRight">
+            <div class="program">
+                <div class="simpleWay">
+                    <@liferay.language key="theme.header.simpleWay" />
+                </div>
+                <div class="selectProgram">
+                    <@liferay.language key="theme.header.selectProgram" />
+                </div>
             </div>
         </div>
-        <div class="education">
-            <div class="educationHeader">
-                <h1 class="text-uppercase">
-                    <@liferay.language key="theme.header.mainText.part1" />
-                        <br>
-                    <@liferay.language key="theme.header.mainText.part2" />
-                </h1>
+        <div class="aboutRussiaBlock">
+            <div class="aboutStudents">
+                <@liferay.language key="theme.header.aboutStudents" />
             </div>
-            <div class="redLine"></div>
-            <div class="educationText">
-                <p>
-                    <@liferay.language key="theme.header.mainTextNext.part1" />
-                        <br>
-                    <@liferay.language key="theme.header.mainTextNext.part2" />
-                </p>
+            <div class="aboutEducation">
+                <@liferay.language key="theme.header.aboutEducation" />
             </div>
-
-            <button class="registrationButton" onclick="location.href='/home#programBanner';">
-                <@liferay.language key="theme.toProgramSelection" />
+            <div class="aboutTop">
+                <@liferay.language key="theme.header.aboutTop" />
+            </div>
+            <div class="aboutCount">
+                <@liferay.language key="theme.header.aboutCount" />
+            </div>
+        </div>
+        <div class="btnPlaceholder">
+            <button class="btn btn-primary registrationButton" href="/program">
+                <@liferay.language key="theme.header.toProgram" />
             </button>
-            <br>
-            <#if false>
-                <div class="educationWhyReg">
-                    <div class="educationWhyRegTextWrapper">
-                        <div class="educationWhyRegTextBlock">
-                            <p>
-                                <@liferay.language key="theme.header.whyRegistrationHint.1" />
-                                    <br>
-                                <@liferay.language key="theme.header.whyRegistrationHint.2" />
-                                    <br>
-                                <@liferay.language key="theme.header.whyRegistrationHint.3" />
-                                    <br>
-                                <@liferay.language key="theme.header.whyRegistrationHint.4" />
-                            </p>
-                        </div>
-                    </div>
-                    <p><@liferay.language key="theme.header.whyRegistrationLink" /></p>
-                </div>
-            </#if>
         </div>
     </div>
 </div>

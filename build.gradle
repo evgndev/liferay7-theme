@@ -9,13 +9,11 @@ buildscript {
 	}
 }
 
-
 apply plugin: "com.liferay.plugin"
 
 plugins.withId("java") {
 	sourceCompatibility = "1.8"
 }
-
 
 repositories {
 	maven {
@@ -27,6 +25,7 @@ buildscript {
 		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.theme.builder", version: "2.0.2"
 		classpath group: "com.liferay", name: "com.liferay.portal.tools.theme.builder", version: "1.1.1"
 		classpath group: "com.liferay", name: "com.liferay.css.builder", version: "1.0.26"
+		classpath group: "org.hidetake", name: "gradle-ssh-plugin", version: "2.9.0"
 	}
 }
 
@@ -40,6 +39,56 @@ dependencies {
 
 	themeBuilder group: "com.liferay", name: "com.liferay.portal.tools.theme.builder", version: "1.1.1"
 	themeBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "1.0.26"
+}
+
+apply plugin: 'org.hidetake.ssh'
+
+//gradle buildTheme build deployRemoteDev
+remotes {
+	dev {
+		role 'devServer'
+		host = '192.168.0.104'
+		user = 'eugene'
+		password = ' '
+		retryCount = 3
+		retryWaitSec = 10
+		knownHosts = allowAnyHosts
+		pty = true
+	}
+	remoteDev {
+		role 'remoteDevServer'
+		host = '90.189.164.179'
+		user = 'eugene'
+		password = ' '
+		retryCount = 3
+		retryWaitSec = 10
+		knownHosts = allowAnyHosts
+		pty = true
+	}
+}
+
+task deployDev {
+	doLast {
+		ant.echo(message: 'Deploy theme to dev server ' + remotes.dev.host)
+		ssh.run {
+			session(remotes.dev) {
+				put from: 'D:\\_Work\\_App\\_russiaeasy\\liferay7-theme\\build\\libs\\liferay7-theme.war',
+						into: '/opt/liferay-705-russiaeasy/deploy'
+			}
+		}
+	}
+}
+
+task deployRemoteDev {
+	doLast {
+		ant.echo(message: 'Deploy theme to remote dev server ' + remotes.remoteDev.host)
+		ssh.run {
+			session(remotes.remoteDev) {
+				put from: 'D:\\_Work\\_App\\_russiaeasy\\liferay7-theme\\build\\libs\\liferay7-theme.war',
+						into: '/opt/liferay-705-russiaeasy/deploy'
+			}
+		}
+	}
 }
 
 task deployTheme(type: Copy){
