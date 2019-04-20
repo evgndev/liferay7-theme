@@ -13,6 +13,18 @@ body:not(.role-enrollee) .navigationLine li.enrollee-area {
   display: none !important;
 }
 
+body.signed-out #navigationList li.program {
+  a {
+    background-color: #63b95f;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: white !important;
+  }
+  &:hover a {
+    background-color: #4ecf47 !important;
+  }
+}
+
 .navigationLine {
   width: 100%;
   position: fixed;
@@ -209,7 +221,7 @@ body:not(.role-enrollee) .navigationLine li.enrollee-area {
         }
 
         &.active {
-          
+
           img {
             content: url('../images/russiaeasy/close.png') !important;
           }
@@ -283,7 +295,7 @@ body:not(.role-enrollee) .navigationLine li.enrollee-area {
         width: 60px;
 
         &:hover {
-         // background-color: #008dff !important;
+          // background-color: #008dff !important;
         }
 
         .shortLabel {

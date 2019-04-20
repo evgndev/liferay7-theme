@@ -30,10 +30,12 @@
                 <@liferay.language key="theme.header.aboutCount" />
             </div>
         </div>
-        <div class="btnPlaceholder">
-            <button class="btn btn-primary registrationButton" href="/program">
-                <@liferay.language key="theme.header.toProgram" />
-            </button>
-        </div>
+        <#if page.getFriendlyURL() != '/program' >
+            <div class="btnPlaceholder">
+                <button class="btn btn-primary registrationButton" href="/program">
+                    <@liferay.language key="theme.header.toProgram" />
+                </button>
+            </div>
+        </#if>
     </div>
 </div>

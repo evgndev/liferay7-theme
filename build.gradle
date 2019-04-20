@@ -47,7 +47,7 @@ apply plugin: 'org.hidetake.ssh'
 remotes {
 	dev {
 		role 'devServer'
-		host = '192.168.0.104'
+		host = '192.168.0.100'
 		user = 'eugene'
 		password = ' '
 		retryCount = 3
