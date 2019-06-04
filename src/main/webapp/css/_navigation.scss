@@ -13,6 +13,10 @@ body:not(.role-enrollee) .navigationLine li.enrollee-area {
   display: none !important;
 }
 
+body.role-enrollee .navigationLine li.privatearea {
+  display: none !important;
+}
+
 body.signed-out #navigationList li.program {
   a {
     background-color: #63b95f;

@@ -1,7 +1,20 @@
+<#--spacer-->
 <div class="navigationLineTopPlaceholder">
-    <#-- navigation line -->
 </div>
+
+<#-- navigation line -->
 <div class="navigationLine">
+    <#-- logo as mobile version /home  link-->
+    <#if page.getFriendlyURL() != '/home' && is_signed_in >
+        <div class="mobileTopBarWrapper">
+            <div class="mobileTopBar" style="text-align: center;">
+                <a href="/">
+                    <img src="/o/liferay7-theme/images/russiaeasy/horizontalLogo.png">
+                </a>
+            </div>
+        </div>
+    </#if>
+    <#-- line-->
     <nav class="${nav_css_class}" id="navigation" role="navigation">
         <h1 class="hide-accessible"><@liferay.language key="navigation" /></h1>
 
@@ -36,6 +49,7 @@
                     <#if !is_signed_in>
                         <#assign nav_item_css_class = "${nav_item_css_class} hidden"/>
                     </#if>
+                    <#assign nav_item_css_class = "${nav_item_css_class} privatearea"/>
                 </#if>
 
                 <#if nav_item_layout.getFriendlyURL() == '/program-tab' >
@@ -124,7 +138,7 @@
                 </a>
             </div>
             <div class="languages" onclick="theme.showLanguageDropdown()">
-<#--                <div class="shortLabel">${themeDisplay.getLocale().getISO3Country()}&nbsp;&#x25BC;</div>-->
+                <#--                <div class="shortLabel">${themeDisplay.getLocale().getISO3Country()}&nbsp;&#x25BC;</div>-->
 
                 <@liferay_portlet["runtime"]
                 defaultPreferences=default_preferences
