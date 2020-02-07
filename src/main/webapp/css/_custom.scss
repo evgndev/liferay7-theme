@@ -965,6 +965,10 @@ body #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesigna
   background: url("/o/liferay7-theme/images/russiaeasy/bar/binActive.png");
 }
 
+#portlet_com_liferay_login_web_portlet_LoginPortlet .portlet-body .navigation {
+    display: none;
+}
+
 @import "_header";
 
 @import "_navigation";
