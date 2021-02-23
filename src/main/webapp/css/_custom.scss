@@ -71,8 +71,8 @@ body.dialog-with-footer {
 
 body.russiaeasyBody {
   #portlet_verify-email-address .alert-info {
-    font-size: 18px !important;
-    font-family: "RobotoCondensedBold", sans-serif !important;;
+    //font-size: 18px !important;
+    //font-family: "RobotoCondensedBold", sans-serif !important;;
   }
   font-family: $light;
   &.signed-out {
@@ -225,7 +225,7 @@ body.russiaeasyBody {
     }
   }
 
-  .btn {
+  .btn:not(.btn-monospaced):not(.btn-unstyled) {
     background-color: white;
     color: #005ea7;
     font-family: $bold;
@@ -531,7 +531,7 @@ body.russiaeasyBody {
   }
 }
 
-//menu
+//menu old (7.0.2)
 body.closed #ControlMenu {
   display: none;
   height: 60px;
@@ -555,7 +555,25 @@ body.closed #ControlMenu {
   }
 }
 
-/* Hide footer */
+//menu new (7.2.1)
+body.closed > div.control-menu:not(:hover) {
+  width: 10px;
+  height: 60px;
+  background-color: #ff0000de;
+  transition: all .1s .002s ease;
+  > div {
+    display: none;
+  }
+}
+
+div.control-menu ul.control-menu-nav li.control-menu-nav-item #_com_liferay_product_navigation_product_menu_web_portlet_ProductMenuPortlet_sidenavToggleId,
+div.control-menu ul.control-menu-nav li.control-menu-nav-item #_com_liferay_product_navigation_product_menu_web_portlet_ProductMenuPortlet_sidenavSliderId {
+  position: absolute;
+  left: 15px;
+  top: 14px;
+}
+
+  /* Hide footer */
 footer, #footer {
   display: none !important;
 }
@@ -826,9 +844,12 @@ body #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesigna
 }
 
 .hidden {
-  display: none;
+  display: none!important;
 }
 
+.autofit-float.autofit-row.portlet-header {
+  position: absolute;
+}
 
 .flagIcon {
   background: url("/o/liferay7-theme/images/russiaeasy/bar/flag.png");

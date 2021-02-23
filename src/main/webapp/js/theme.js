@@ -2,7 +2,17 @@ var theme = (function () {
     var me = {},
         _searchView = undefined,
         _searchBtn = undefined,
-        _$languageDropdown = undefined;
+        _$languageDropdown = undefined,
+        _$languagesDiv = undefined;
+
+    $(document).ready(function() {
+        console.log( "ready!" );
+        _$languagesDiv = $(".languages")
+        _$languagesDiv.find('button.dropdown-toggle').click(function (e) {
+            me.showLanguageDropdown();
+        });
+    });
+
 
     me.toggleSearch = function () {
         _searchView = $("#searchView");
@@ -14,22 +24,21 @@ var theme = (function () {
     };
 
     function _createLangDiv($lang) {
-        var langLabel = $lang.find("svg").attr("message");
-        langLabel = langLabel.replace("[Beta]", "");
-        var $langLink = $lang.clone().append("&nbsp;").append(langLabel);
+        let labelSpan = $lang.find("span.taglib-text-icon");
+        var langLabel = labelSpan.text().split("-")[0];
+        labelSpan.text(langLabel);
+        console.log('TEST langLabel', langLabel);
+        var $langLink = $lang.clone();
         return $("<div>").append($langLink);
     }
 
     me.showLanguageDropdown = function () {
         try {
-            var $languagesDiv = $(".languages");
-
             if (!_$languageDropdown || !_$languageDropdown.length) {
-                _$languageDropdown = $languagesDiv.find(".languageDropdown ");
-                var $activeLanguage = $languagesDiv.find(".portlet-body > span.current-language");
-                var $notActiveLanguages = $languagesDiv.find(".portlet-body > a");
-                _$languageDropdown.append(_createLangDiv($activeLanguage));
-
+                _$languageDropdown = _$languagesDiv.find(".languageDropdown ");
+                var $notActiveLanguages = $("a[href*='/c/portal/update_language']");
+                    // = $("a[id^='_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet']")
+                    //     .find("a[href^='/c/portal/update_language']");
                 $notActiveLanguages.each(function () {
                     var $lang = $(this);
                     var $langDiv = _createLangDiv($lang);
@@ -37,10 +46,13 @@ var theme = (function () {
                 });
             }
 
+            console.log('TEST _$languageDropdown', _$languageDropdown);
             if (!_$languageDropdown.is(":visible")) {
                 _$languageDropdown.show();
+                console.log('TEST not visible, show');
             } else {
                 _$languageDropdown.hide();
+                console.log('TEST is visible, hide');
             }
         } catch (e) {
             console.error('Cannot render languages', e);

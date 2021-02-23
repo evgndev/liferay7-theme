@@ -36,7 +36,7 @@
 
 
 <#--<script src="/o/liferay7-theme/js/slick.js"></script>-->
-    <script src="/o/liferay7-theme/js/theme.js?v=9"></script>
+    <script src="/o/liferay7-theme/js/theme.js?v=21"></script>
     <link rel="stylesheet" type="text/css" href="/o/liferay7-theme/css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/o/liferay7-theme/css/slick-theme.css"/>
 

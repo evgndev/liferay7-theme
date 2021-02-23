@@ -298,6 +298,19 @@ body.signed-out #navigationList li.program {
         text-align: center;
         width: 60px;
 
+        button.dropdown-toggle {
+          background-color: #025ea8;
+          border: none;
+          border-radius: 0;
+          outline: none;
+          height: 32px;
+          padding: 2px;
+        }
+
+        section .truncate-text {
+          overflow: inherit;
+        }
+
         &:hover {
           // background-color: #008dff !important;
         }
@@ -384,4 +397,8 @@ body.signed-out #navigationList li.program {
       }
     }
   }
+}
+//hide lang dropdown from body
+ul[aria-labelledby^="_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_"] {
+  display: none !important;
 }

@@ -137,7 +137,7 @@
                     <img src="/o/liferay7-theme/images/russiaeasy/navigation/search.png" alt="search"/>
                 </a>
             </div>
-            <div class="languages" onclick="theme.showLanguageDropdown()">
+            <div class="languages">
                 <#--                <div class="shortLabel">${themeDisplay.getLocale().getISO3Country()}&nbsp;&#x25BC;</div>-->
 
                 <@liferay_portlet["runtime"]
